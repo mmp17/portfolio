@@ -1,0 +1,573 @@
+/* Muzaffar Mirzaev — portfolio. Layout modelled on the AcademicPages theme. */
+
+:root {
+  --text: #494e52;
+  --heading: #111;
+  --accent: #0066cc;
+  --rule: #e8e8e8;
+  --rule-soft: #f0f0f0;
+  --bg: #fff;
+  --card: #fafbfc;
+  --gutter: 10%;
+  --sidebar: 14rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading);
+  line-height: 1.25;
+}
+
+hr {
+  margin: 1.75em 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+/* Masthead */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--gutter);
+  min-height: 3.75rem;
+}
+
+.masthead__brand {
+  color: var(--heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: block;
+  padding: 1.1rem 0;
+  color: var(--text);
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--heading);
+  text-decoration: none;
+  border-bottom-color: var(--heading);
+}
+
+.nav-toggle {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: var(--heading);
+  cursor: pointer;
+}
+
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  margin: 0 auto;
+  background: #fff;
+  content: "";
+}
+
+.nav-toggle span {
+  position: relative;
+}
+
+.nav-toggle span::before,
+.nav-toggle span::after {
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle span::before {
+  top: -6px;
+}
+
+.nav-toggle span::after {
+  top: 6px;
+}
+
+/* Page frame: sidebar + content */
+.main {
+  display: grid;
+  grid-template-columns: var(--sidebar) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  padding: 2.5rem var(--gutter) 3rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 5.5rem;
+}
+
+.author__avatar {
+  display: block;
+  width: 100%;
+  max-width: 11rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  object-fit: cover;
+  object-position: center top;
+}
+
+.author__name {
+  margin: 1rem 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.author__bio {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.author__follow {
+  display: none;
+}
+
+.author__urls {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.author__urls li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0;
+}
+
+.author__urls a {
+  color: var(--text);
+}
+
+.author__urls a:hover {
+  color: var(--accent);
+}
+
+.icon {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Content */
+.content h1 {
+  margin: 0 0 0.5em;
+  font-size: 1.75rem;
+}
+
+.content h1:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.content h2 {
+  margin: 1.5em 0 0.35em;
+  font-size: 1.25rem;
+}
+
+.content h3 {
+  margin: 1.1em 0 0.15em;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.content h1 + hr,
+.content h2 + hr {
+  margin: 0.35em 0 0.75em;
+}
+
+.content p {
+  margin: 0 0 0.85em;
+}
+
+.intro p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.intro + hr {
+  margin: 1em 0 1.25em;
+}
+
+.content-list {
+  margin: 0 0 0.75em;
+  padding: 0;
+  list-style: none;
+}
+
+.content-list > li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+  font-size: 0.975rem;
+}
+
+.content-list > li:last-child {
+  border-bottom: 0;
+}
+
+.content-list strong {
+  display: block;
+  color: var(--heading);
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.content-list strong a {
+  color: var(--heading);
+}
+
+.content-list strong a:hover {
+  color: var(--accent);
+}
+
+.item-desc {
+  display: block;
+  margin-top: 0.3em;
+}
+
+.item-meta {
+  display: block;
+  margin-top: 0.3em;
+  font-size: 0.875rem;
+}
+
+.activity-date,
+.role__meta {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.activity-date::after {
+  content: " — ";
+  color: var(--text);
+  font-weight: 400;
+}
+
+.role {
+  padding: 0.6rem 0 0.4rem;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.role:last-of-type {
+  border-bottom: 0;
+}
+
+.role h3 {
+  margin: 0;
+}
+
+.role ul {
+  margin: 0.4rem 0 0.5rem;
+  padding-left: 1.1rem;
+  font-size: 0.975rem;
+}
+
+.role li {
+  margin-bottom: 0.2rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.skills {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.skills th,
+.skills td {
+  padding: 0.5rem 0.75rem 0.5rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.skills th {
+  width: 12rem;
+  color: var(--heading);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  margin-top: 0.75em;
+  border: 0;
+  border-radius: 4px;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 1rem;
+  padding: 1.5rem var(--gutter) 2rem;
+  border-top: 1px solid var(--rule);
+  background: #f7f8f9;
+  font-size: 0.85rem;
+}
+
+.page-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1rem;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.page-footer p {
+  margin: 0;
+  color: #6b7075;
+}
+
+/* Tablet and below */
+@media (max-width: 57.8em) {
+  :root {
+    --gutter: 5%;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .js .site-nav:not(.is-open) {
+    display: none;
+  }
+
+  .site-nav ul {
+    display: block;
+    padding: 0.25rem var(--gutter) 0.5rem;
+  }
+
+  .site-nav a {
+    padding: 0.8rem 0;
+    border-bottom: 0;
+  }
+
+  .site-nav a[aria-current="page"] {
+    font-weight: 600;
+  }
+
+  .main {
+    display: block;
+    padding-top: 1.25rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sidebar {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.85rem 1rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: var(--card);
+  }
+
+  .author__avatar {
+    flex: 0 0 auto;
+    width: 4.5rem;
+  }
+
+  .author__content {
+    flex: 1 1 12rem;
+    min-width: 0;
+  }
+
+  .author__name {
+    margin-top: 0;
+  }
+
+  .author__bio {
+    margin: 0;
+  }
+
+  .author__links {
+    flex: 1 1 100%;
+  }
+
+  .js .author__follow {
+    display: block;
+    width: 100%;
+    min-height: 2.75rem;
+    border: 1px solid var(--heading);
+    border-radius: 4px;
+    background: var(--bg);
+    color: var(--heading);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .js .author__urls:not(.is-open) {
+    display: none;
+  }
+
+  .author__urls {
+    margin-top: 0.5rem;
+  }
+
+  .author__urls li {
+    padding: 0.45rem 0;
+  }
+
+  .intro p {
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 1.45rem;
+  }
+
+  .content-list > li {
+    padding: 0.65rem 0;
+  }
+
+  .activity-date {
+    display: block;
+    margin-bottom: 0.25em;
+    font-size: 0.875rem;
+  }
+
+  .activity-date::after {
+    content: none;
+  }
+
+  .skills th {
+    width: auto;
+    white-space: normal;
+  }
+
+  .map-embed iframe {
+    height: 220px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 37.5em) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .masthead__brand {
+    font-size: 0.95rem;
+  }
+
+  .content h1 {
+    font-size: 1.3rem;
+  }
+
+  .content h2 {
+    font-size: 1.1rem;
+  }
+
+  .skills th,
+  .skills td {
+    display: block;
+    padding-right: 0;
+  }
+
+  .skills th {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .skills td {
+    padding-top: 0.15rem;
+  }
+}
