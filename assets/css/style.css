@@ -519,6 +519,33 @@ hr {
   }
 }
 
+/* Posts with many photos: the grid scrolls instead of growing. */
+.post-card__photos--scroll {
+  max-height: 21rem;
+  padding-right: 0.25rem;
+  overflow-y: auto;
+}
+
+@media (min-width: 57.81em) {
+  .post-card__photos--scroll {
+    height: 0;
+    min-height: 100%;
+    max-height: none;
+    grid-auto-rows: auto;
+    align-content: start;
+  }
+
+  .post-card__photos--scroll a {
+    position: static;
+  }
+
+  .post-card__photos--scroll img {
+    position: static;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+}
+
 /* Full-screen photo carousel */
 .lightbox {
   width: 100vw;
