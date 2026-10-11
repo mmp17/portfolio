@@ -438,7 +438,8 @@ hr {
 }
 
 .video-card__thumb img,
-.post-card__video img {
+.post-card__video img,
+.post-card__lead img {
   display: block;
   width: 100%;
   height: auto;

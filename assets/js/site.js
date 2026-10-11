@@ -78,9 +78,9 @@
     select(fromHash() || buttons[0]);
   }
 
-  // Clicking a photo opens the group in a full-screen carousel.
-  function gallery(group) {
-    var links = Array.prototype.slice.call(group.querySelectorAll('a'));
+  // Clicking a photo opens the post's photos in a full-screen carousel.
+  function gallery(card) {
+    var links = Array.prototype.slice.call(card.querySelectorAll('.post-card__lead, .post-card__photos a'));
     if (!links.length || !window.HTMLDialogElement) {
       return;
     }
@@ -154,7 +154,7 @@
     toggle(document.querySelector('.nav-toggle'), document.getElementById('site-nav'));
     toggle(document.querySelector('.author__follow'), document.getElementById('author-urls'));
     tabs(document.querySelector('.tabs'));
-    document.querySelectorAll('.post-card__photos').forEach(gallery);
+    document.querySelectorAll('.post-card').forEach(gallery);
 
     // The address is kept out of the markup; build the mailto link here.
     document.querySelectorAll('.js-email').forEach(function (el) {
