@@ -474,6 +474,11 @@ hr {
   object-fit: cover;
 }
 
+.post-card .item-meta {
+  color: var(--accent);
+  font-weight: 500;
+}
+
 .post-card__body {
   grid-column: 1 / -1;
   padding-top: 1rem;
