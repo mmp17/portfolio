@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog · Muzaffar Mirzaev</title>
+    <meta name="description" content="Blog of Muzaffar Mirzaev: YouTube podcasts with developers and researchers working in Korea, plus personal and IT posts.">
+    <meta property="og:site_name" content="Muzaffar Mirzaev">
+    <meta property="og:title" content="Blog · Muzaffar Mirzaev">
+    <meta property="og:description" content="Blog of Muzaffar Mirzaev: YouTube podcasts with developers and researchers working in Korea, plus personal and IT posts.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script>document.documentElement.className = 'js';</script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="masthead__inner">
+        <a class="masthead__brand" href="../index.html">Muzaffar Mirzaev</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="../experience/index.html">Experience</a></li>
+            <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
+            <li><a href="../cv/index.html">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main">
+      <aside class="sidebar">
+        <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
+        <div class="author__content">
+          <h2 class="author__name">Muzaffar Mirzaev, Ph.D.</h2>
+          <p class="author__bio">Building software for digital twins, autonomous mobile robots, AI vision and smart factories.</p>
+        </div>
+        <div class="author__links">
+          <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
+          <ul class="author__urls" id="author-urls">
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
+            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar">YouTube</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="content">
+        <h1>Blog</h1>
+        <div class="tabs" role="tablist" aria-label="Blog sections">
+          <button class="tabs__tab" type="button" role="tab" id="tab-podcasts" aria-controls="podcasts" aria-selected="true">YouTube Podcasts</button>
+          <button class="tabs__tab" type="button" role="tab" id="tab-personal" aria-controls="personal" aria-selected="false">Personal</button>
+          <button class="tabs__tab" type="button" role="tab" id="tab-it" aria-controls="it" aria-selected="false">IT</button>
+        </div>
+        <section class="tab-panel" role="tabpanel" id="podcasts" aria-labelledby="tab-podcasts">
+          <ul class="content-list video-list">
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=DDgPoVAVRrI" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/DDgPoVAVRrI/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=DDgPoVAVRrI">Podkast (01) Jumanazar Said bilan: &quot;O‘qish, Kodlash va Muvaffaqiyat: Koreyadagi Web-Dasturchi Hayoti</a></strong>
+                <span class="item-desc">Ушбу биринчи подкастимизда, Кореяда фаолият юритаётган ўзбек веб-дастурчи Жуманазар Саид билан суҳбатлашамиз. Унинг таълим йўли, Кореяга келиш тажрибаси ва ишни мувозанатлаш, шунингдек, Корея ва Ўзбекистондаги IT соҳасидаги фарқлар ҳақида билиб оламиз. Жуманазарнинг ҳикояси, чет элда муваффақиятга эришишни истаган дастурчилар учун фойдали бўлади, деб умид қиламиз.</span>
+                <span class="item-meta">Recorded episode</span>
+              </div>
+            </li>
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=KQzGMGQfoJI" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/KQzGMGQfoJI/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=KQzGMGQfoJI">Podcast (02) From Factory to Coding: A Journey Through Korea’s Tech World with Alex (Aleksey Kim)</a></strong>
+                <span class="item-desc">In this episode, we sit down with Alex, a dynamic personality who has charted an incredible path from Uzbekistan to South Korea. Alex shares his journey of transitioning from a background in International Tourism to becoming Senior Web Developer, tackling factory jobs, teaching English to Korean students, and growing rapidly in Korea's tech industry.</span>
+                <span class="item-desc">We explore his motivations for moving to Korea, his job-hunting challenges, the importance of speaking four languages – Uzbek, Russian, English, and Korean – and his experiences working on key projects in a fast-paced environment.</span>
+                <span class="item-meta">Recorded episode</span>
+              </div>
+            </li>
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=XJVF55CMPG4" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/XJVF55CMPG4/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=XJVF55CMPG4">Podkast (3) Dasturlashga intilish va Koreyadagi muvaffaqiyatlar: Anvarbek Ziyodov bilan suhbat</a></strong>
+                <span class="item-desc">Ушбу подкастда Кореяда IT соҳасида муваффақият қозонган Анварбек Зиёдов билан суҳбатлашамиз. Унинг таълим олиш йўли, Кореяга келиб дастурлашни ўрганиш жараёни, ҳамда иш жараёнларида учраган қийинчиликлари ҳақида батафсил маълумот берамиз.</span>
+                <span class="item-meta">Recorded episode</span>
+              </div>
+            </li>
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=v99dsqMlwUY" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/v99dsqMlwUY/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=v99dsqMlwUY">PODKAST # 4 – Jonli Suhbat: Bekzod Rizo bilan!</a></strong>
+                <span class="item-desc">Mavzu: “Web dasturlashni o‘rganish va o‘rgatish”</span>
+                <ul class="item-topics">
+                  <li>Dasturlashga kirib kelish tarixi</li>
+                  <li>Koreyada dasturchi sifatida ish topish va ish muhitining farqlari</li>
+                  <li>Web dasturlash tillari va eng yaxshi texnologiyalar</li>
+                  <li>DevEx loyihasi va IT sohasi bo‘yicha maslahatlar</li>
+                  <li>Yangi texnologiyalar va o‘zini rivojlantirish strategiyalari</li>
+                </ul>
+                <span class="item-meta">Live stream</span>
+              </div>
+            </li>
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=ssKAomfmxJ0" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/ssKAomfmxJ0/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=ssKAomfmxJ0">PODKAST #5 – Jonli Suhbat: Bekhzod Olimov bilan!</a></strong>
+                <span class="item-desc">Mavzu: “Sun’iy intellektni o‘rganish va uni boshqalarga o‘rgatish”</span>
+                <ul class="item-topics">
+                  <li>Dasturlashga kirib kelish tarixi va ilk qadamlar</li>
+                  <li>Koreyada dasturchi sifatida ish topish va ish muhiti</li>
+                  <li>AI texnologiyalari va ularning rivojlanishi</li>
+                  <li>Yangi boshlayotganlarga foydali maslahatlar</li>
+                  <li>Shaxsiy rivojlanish va zamonaviy texnologiyalarni o‘zlashtirish strategiyalari</li>
+                </ul>
+                <span class="item-meta">Live stream</span>
+              </div>
+            </li>
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=AbdJpJ-JTAE" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/AbdJpJ-JTAE/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=AbdJpJ-JTAE">PODCAST #6 – Жонли суҳбат: Ахроржон Рахмонов, PhD билан!</a></strong>
+                <span class="item-desc">Mavzu: “AI соҳасидаги ўзгаришлар, Computer Vision, NLP ва AI Engineer бўлиш йўли”</span>
+                <ul class="item-topics">
+                  <li>Dasturlashga kirib kelish tarixi va ilk qadamlar</li>
+                  <li>Kyungpook National University’да PhD тажрибаси ва илмий тадқиқот йўли</li>
+                  <li>AI texnologiyalari va ularning rivojlanishi</li>
+                  <li>Кореяда AI Researcher ва AI Engineer сифатида ишлаш муҳити</li>
+                  <li>Yangi boshlayotganlarga foydali maslahatlar</li>
+                  <li>Shaxsiy rivojlanish va zamonaviy texnologiyalarni o‘zlashtirish strategiyalari</li>
+                  <li>Илмий мақола ёзиш, research mindset ва career growth ҳақида суҳбат</li>
+                </ul>
+                <span class="item-meta">Live stream</span>
+              </div>
+            </li>
+            <li class="video-card">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=fmw5Wl4iHxM" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/fmw5Wl4iHxM/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <strong><a href="https://www.youtube.com/watch?v=fmw5Wl4iHxM">PODCAST #7 – Жонли суҳбат: Жасур Собиржонов билан!</a></strong>
+                <span class="item-desc">Мавзу: “Senior Web дастурчи, Mango Market асосчиси ва Ўзбекистонда marketplace қуриш тажрибаси”</span>
+                <ul class="item-topics">
+                  <li>Бизнес таълимидан software development ва startup’гача бўлган йўл</li>
+                  <li>Кореяда ўқиш, ишлаш ва ecommerce тажрибаси</li>
+                  <li>Kupay, Arames/Azon Market каби Korean halal ecommerce platform’аларини бошқариш тажрибаси</li>
+                  <li>Full-stack developer сифатида ўсиш ва outsourcing project’лардан олинган сабоқлар</li>
+                  <li>Calculator app: оддий муаммодан маҳсулот яратиш тажрибаси</li>
+                  <li>Mango Market ғояси, Karrot Market модели ва Ўзбекистон бозорига мослаштириш</li>
+                  <li>P2P, second-hand market ва “Малика” каби анъанавий бозорлар келажаги</li>
+                  <li>Ўзбекистонда микроқарзлар, истеъмол маданияти ва second-hand иқтисодиёти</li>
+                  <li>1.5 йиллик меҳнат, launch жараёни ва Google Play’да 50,000+ юкланишга эришиш</li>
+                  <li>Ёш дастурчилар ва startup бошламоқчи бўлганлар учун амалий маслаҳатлар</li>
+                </ul>
+                <span class="item-meta">Live stream</span>
+              </div>
+            </li>
+          </ul>
+          <p>More on the <a href="https://www.youtube.com/@mirzaev_muzaffar">YouTube channel</a>.</p>
+        </section>
+        <section class="tab-panel" role="tabpanel" id="personal" aria-labelledby="tab-personal">
+          <p>Personal posts about sightseeing and travel are coming soon.</p>
+        </section>
+        <section class="tab-panel" role="tabpanel" id="it" aria-labelledby="tab-it">
+          <p>IT-related posts are coming soon.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="page-footer">
+      <ul>
+        <li><strong>Follow:</strong></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
+      </ul>
+      <p>&copy; 2026 Muzaffar Mirzaev. Layout modelled on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</p>
+    </footer>
+
+    <script src="../assets/js/site.js"></script>
+  </body>
+</html>

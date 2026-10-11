@@ -12,7 +12,8 @@ autonomous mobile robots, AI vision and smart-factory systems.
 | Home | `index.html` | Introduction and activity timeline |
 | Projects | `projects/index.html` | Robotics and digital twin, smart factory and AI, web applications |
 | Experience | `experience/index.html` | Work history, education, core technologies, languages |
-| CV | `cv/index.html` | Resume and portfolio links, contact details, map |
+| Blog | `blog/index.html` | YouTube podcasts, personal posts, IT posts (tabs) |
+| Resume | `cv/index.html` | Resume and portfolio links, contact details, map |
 
 ## Stack
 
@@ -20,14 +21,14 @@ Plain HTML, CSS and JavaScript. There is no build step and no dependencies.
 
 ```
 index.html
-projects/  experience/  cv/     one index.html each
+projects/  experience/  blog/  cv/   one index.html each
 assets/css/style.css            single stylesheet, responsive
-assets/js/site.js               mobile menu, Follow toggle, email link
+assets/js/site.js               mobile menu, Follow toggle, blog tabs, email link
 images/                         avatar and favicon
 ```
 
-The header, sidebar and footer are repeated in each of the four HTML files, so a change to them has
-to be made in all four.
+The header, sidebar and footer are repeated in each of the five HTML files, so a change to them has
+to be made in all five.
 
 ## Run locally
 
