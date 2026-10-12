@@ -60,6 +60,20 @@ hr {
   border-top: 1px solid var(--rule);
 }
 
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -999rem;
+  z-index: 40;
+  padding: 0.6rem 1rem;
+  background: var(--heading);
+  color: #fff;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 /* Masthead */
 .masthead {
   position: sticky;
@@ -175,7 +189,18 @@ hr {
 
 .author__name {
   margin: 1rem 0 0.35rem;
+  color: var(--heading);
   font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.author__title {
+  margin: 0 0 0.5rem;
+  color: var(--heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .author__bio {
@@ -227,13 +252,14 @@ hr {
   font-size: 1.75rem;
 }
 
-.content h1:not(:first-child) {
-  margin-top: 1.5rem;
+.content h2 {
+  margin: 1.75rem 0 0.35em;
+  font-size: 1.4rem;
 }
 
-.content h2 {
-  margin: 1.5em 0 0.35em;
-  font-size: 1.25rem;
+/* Anchored headings and cards stop below the sticky masthead. */
+.content [id] {
+  scroll-margin-top: 4.75rem;
 }
 
 .content h3 {
@@ -251,13 +277,105 @@ hr {
   margin: 0 0 0.85em;
 }
 
+.lead {
+  color: var(--heading);
+  font-size: 1.05rem;
+}
+
+.note {
+  font-size: 0.875rem;
+}
+
 .intro p {
   text-align: justify;
   text-justify: inter-word;
 }
 
-.intro + hr {
-  margin: 1em 0 1.25em;
+/* Home page introduction */
+.hero {
+  margin-bottom: 1.5rem;
+}
+
+.content .hero__name {
+  margin: 0 0 0.25rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.content .hero h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.hero__focus {
+  display: block;
+  color: var(--text);
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.content .hero__lead {
+  max-width: 40rem;
+  margin: 0.9rem 0 1.1rem;
+  color: var(--heading);
+  font-size: 1.1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--heading);
+  border-radius: 4px;
+  color: var(--heading);
+  font-size: 0.925rem;
+  font-weight: 600;
+}
+
+.button:hover,
+.button--primary {
+  background: var(--heading);
+  color: #fff;
+  text-decoration: none;
+}
+
+.button--primary:hover {
+  background: #333;
+}
+
+.focus-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+  margin: 0 0 0.75em;
+  padding: 0;
+  list-style: none;
+}
+
+.focus-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+  font-size: 0.975rem;
+}
+
+.focus-list strong {
+  display: block;
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.925rem;
 }
 
 .content-list {
@@ -302,6 +420,112 @@ hr {
   font-size: 0.875rem;
 }
 
+.content-list--compact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+}
+
+.content-list--compact > li {
+  font-size: 0.9rem;
+}
+
+/* Projects */
+.project {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.project h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.project h3 a {
+  color: var(--heading);
+}
+
+.project h3 a:hover {
+  color: var(--accent);
+}
+
+.project .role__meta {
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.content .project__summary {
+  margin: 0.5rem 0 0;
+  font-size: 0.975rem;
+}
+
+.content .project__note {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+}
+
+.project--flagship {
+  margin: 0.75rem 0 0.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.project--flagship h3 {
+  font-size: 1.3rem;
+}
+
+.case {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: 0.6rem 1rem;
+  margin: 0.75rem 0 0;
+  font-size: 0.975rem;
+}
+
+.case dt {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.case dd {
+  margin: 0;
+}
+
+.case ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.case li {
+  margin-bottom: 0.3rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.05rem 0.55rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status--implemented {
+  color: #1a7f37;
+}
+
+.status--prototype {
+  color: #8a5a00;
+}
+
+.status--planned {
+  color: #6b7075;
+}
+
 .activity-date,
 .role__meta {
   color: var(--accent);
@@ -342,25 +566,47 @@ hr {
   overflow-x: auto;
 }
 
-.skills {
+.table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
 }
 
-.skills th,
-.skills td {
+.table th,
+.table td {
   padding: 0.5rem 0.75rem 0.5rem 0;
   border-bottom: 1px solid var(--rule-soft);
   text-align: left;
   vertical-align: top;
 }
 
-.skills th {
+.table th {
   width: 12rem;
   color: var(--heading);
   font-weight: 600;
   white-space: nowrap;
+}
+
+.table--status {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.table--status caption {
+  padding-bottom: 0.25rem;
+  color: var(--heading);
+  font-weight: 600;
+  text-align: left;
+}
+
+.table--status th {
+  width: auto;
+  white-space: normal;
+}
+
+.table--status thead th {
+  font-size: 0.8rem;
+  font-weight: 500;
 }
 
 .map-embed iframe {
@@ -412,9 +658,105 @@ hr {
   outline-offset: -2px;
 }
 
+/* With scripting off, every panel is shown and needs its own heading. */
+.js .tab-panel__title {
+  display: none;
+}
+
 .item-topics {
   margin: 0.3em 0 0;
   padding-left: 1.1rem;
+}
+
+.item-eyebrow {
+  display: block;
+  margin: 0 0 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.15rem 0.75rem;
+  margin: 0.4rem 0 0;
+  font-size: 0.925rem;
+}
+
+.facts dt {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.content details {
+  margin-top: 0.4rem;
+  font-size: 0.925rem;
+}
+
+.content summary {
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.content details p {
+  margin: 0.4rem 0 0;
+}
+
+/* IT articles: list on the blog page, and the article page itself. */
+.article-list > li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.article {
+  max-width: 44rem;
+}
+
+.article figure {
+  margin: 1.25rem 0;
+}
+
+.article figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+}
+
+.article figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.article pre {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--card);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.article code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+.article footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
 }
 
 /* Blog cards. Podcasts: thumbnail left, text right.
@@ -792,6 +1134,23 @@ hr {
     font-size: 1.45rem;
   }
 
+  .content h2 {
+    font-size: 1.25rem;
+  }
+
+  .content .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero__focus {
+    font-size: 1.15rem;
+  }
+
+  /* The author card directly above already shows the name. */
+  .hero__name {
+    display: none;
+  }
+
   .content-list > li {
     padding: 0.65rem 0;
   }
@@ -806,7 +1165,7 @@ hr {
     content: none;
   }
 
-  .skills th {
+  .table th {
     width: auto;
     white-space: normal;
   }
@@ -831,21 +1190,52 @@ hr {
   }
 
   .content h2 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
-  .skills th,
-  .skills td {
+  .content .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero__focus,
+  .hero__lead {
+    font-size: 1.05rem;
+  }
+
+  .focus-list,
+  .content-list--compact {
+    grid-template-columns: 1fr;
+  }
+
+  .project--flagship {
+    padding: 1rem;
+  }
+
+  .case {
+    display: block;
+  }
+
+  .case dt {
+    margin-top: 0.75rem;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table th,
+  .table td {
     display: block;
     padding-right: 0;
   }
 
-  .skills th {
+  .table th,
+  .table--status td:not(:last-child) {
     padding-bottom: 0;
     border-bottom: 0;
   }
 
-  .skills td {
+  .table td {
     padding-top: 0.15rem;
   }
 }

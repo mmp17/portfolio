@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog · Muzaffar Mirzaev</title>
-    <meta name="description" content="Blog of Muzaffar Mirzaev: YouTube podcasts with developers and researchers working in Korea, plus personal and IT posts.">
+    <meta name="description" content="Blog of Muzaffar Mirzaev: YouTube podcasts with developers and researchers working in Korea, engineering articles on robotics software, and personal posts.">
+    <meta name="author" content="Muzaffar Mirzaev">
+    <link rel="canonical" href="https://mmp17.github.io/portfolio/blog/">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Muzaffar Mirzaev">
     <meta property="og:title" content="Blog · Muzaffar Mirzaev">
-    <meta property="og:description" content="Blog of Muzaffar Mirzaev: YouTube podcasts with developers and researchers working in Korea, plus personal and IT posts.">
+    <meta property="og:description" content="Blog of Muzaffar Mirzaev: YouTube podcasts with developers and researchers working in Korea, engineering articles on robotics software, and personal posts.">
+    <meta property="og:url" content="https://mmp17.github.io/portfolio/blog/">
+    <meta property="og:image" content="https://mmp17.github.io/portfolio/images/avatar.jpg">
+    <meta property="og:image:alt" content="Portrait of Muzaffar Mirzaev">
+    <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="../images/favicon.png">
@@ -15,6 +22,7 @@
     <script>document.documentElement.className = 'js';</script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="masthead">
       <div class="masthead__inner">
         <a class="masthead__brand" href="../index.html">Muzaffar Mirzaev</a>
@@ -25,18 +33,19 @@
             <li><a href="../projects/index.html">Projects</a></li>
             <li><a href="../experience/index.html">Experience</a></li>
             <li><a href="../blog/index.html" aria-current="page">Blog</a></li>
-            <li><a href="../cv/index.html">Resume</a></li>
+            <li><a href="../resume/index.html">Resume</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <div class="main">
-      <aside class="sidebar">
+      <aside class="sidebar" aria-label="About the author">
         <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
         <div class="author__content">
-          <h2 class="author__name">Muzaffar Mirzaev, Ph.D.</h2>
-          <p class="author__bio">Building software for digital twins, autonomous mobile robots, AI vision and smart factories.</p>
+          <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
+          <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
+          <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
         </div>
         <div class="author__links">
           <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
@@ -50,7 +59,7 @@
         </div>
       </aside>
 
-      <main class="content">
+      <main class="content" id="main">
         <h1>Blog</h1>
         <div class="tabs" role="tablist" aria-label="Blog sections">
           <button class="tabs__tab" type="button" role="tab" id="tab-podcasts" aria-controls="podcasts" aria-selected="true">YouTube Podcasts</button>
@@ -58,122 +67,250 @@
           <button class="tabs__tab" type="button" role="tab" id="tab-personal" aria-controls="personal" aria-selected="false">Personal</button>
         </div>
         <section class="tab-panel" role="tabpanel" id="podcasts" aria-labelledby="tab-podcasts">
+          <h2 class="tab-panel__title">YouTube Podcasts</h2>
+          <p>Conversations with developers, researchers and founders from Uzbekistan who work in Korea's tech industry. Most episodes are in Uzbek; the summaries here are in English.</p>
+          <!-- Episode template. Newest episode goes last. Leave out any line you have no data for.
+            <li class="video-card" id="episode-08">
+              <a class="video-card__thumb" href="https://www.youtube.com/watch?v=VIDEO_ID" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/VIDEO_ID/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
+              <div class="video-card__body">
+                <span class="item-eyebrow">Episode 08 · <time datetime="YYYY-MM-DD">D Mon YYYY</time> · Live stream · 1 h 30 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=VIDEO_ID">Episode title or topic</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd>Name</dd>
+                  <dt>Background</dt><dd>Role, company or field</dd>
+                  <dt>Topic</dt><dd>One line in English</dd>
+                </dl>
+                <span class="item-desc">Two or three sentences in English about the conversation.</span>
+                <details>
+                  <summary>Key takeaways</summary>
+                  <ul class="item-topics">
+                    <li>First takeaway</li>
+                  </ul>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=VIDEO_ID">Watch on YouTube</a></span>
+              </div>
+            </li>
+          -->
           <ul class="content-list video-list">
-            <li class="video-card">
+            <li class="video-card" id="episode-01">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=DDgPoVAVRrI" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/DDgPoVAVRrI/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=DDgPoVAVRrI">Podkast (01) Jumanazar Said bilan: &quot;O‘qish, Kodlash va Muvaffaqiyat: Koreyadagi Web-Dasturchi Hayoti</a></strong>
-                <span class="item-desc">Ушбу биринчи подкастимизда, Кореяда фаолият юритаётган ўзбек веб-дастурчи Жуманазар Саид билан суҳбатлашамиз. Унинг таълим йўли, Кореяга келиш тажрибаси ва ишни мувозанатлаш, шунингдек, Корея ва Ўзбекистондаги IT соҳасидаги фарқлар ҳақида билиб оламиз. Жуманазарнинг ҳикояси, чет элда муваффақиятга эришишни истаган дастурчилар учун фойдали бўлади, деб умид қиламиз.</span>
-                <span class="item-meta">Recorded episode</span>
+                <span class="item-eyebrow">Episode 01 · <time datetime="2024-12-01">1 Dec 2024</time> · Recorded · 1 h 6 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=DDgPoVAVRrI" lang="uz">O‘qish, Kodlash va Muvaffaqiyat: Koreyadagi Web-Dasturchi Hayoti</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd>Jumanazar Said</dd>
+                  <dt>Background</dt><dd>Uzbek web developer working in Korea</dd>
+                  <dt>Topic</dt><dd>Studying, coding and success: the life of a web developer in Korea</dd>
+                </dl>
+                <span class="item-desc">The first episode. Jumanazar talks about his education, his experience of coming to Korea and balancing work, and how the IT industries in Korea and Uzbekistan differ.</span>
+                <details>
+                  <summary>Original description</summary>
+                  <p lang="uz-Cyrl">Ушбу биринчи подкастимизда, Кореяда фаолият юритаётган ўзбек веб-дастурчи Жуманазар Саид билан суҳбатлашамиз. Унинг таълим йўли, Кореяга келиш тажрибаси ва ишни мувозанатлаш, шунингдек, Корея ва Ўзбекистондаги IT соҳасидаги фарқлар ҳақида билиб оламиз. Жуманазарнинг ҳикояси, чет элда муваффақиятга эришишни истаган дастурчилар учун фойдали бўлади, деб умид қиламиз.</p>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=DDgPoVAVRrI">Watch on YouTube</a></span>
               </div>
             </li>
-            <li class="video-card">
+            <li class="video-card" id="episode-02">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=KQzGMGQfoJI" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/KQzGMGQfoJI/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=KQzGMGQfoJI">Podcast (02) From Factory to Coding: A Journey Through Korea’s Tech World with Alex (Aleksey Kim)</a></strong>
-                <span class="item-desc">In this episode, we sit down with Alex, a dynamic personality who has charted an incredible path from Uzbekistan to South Korea. Alex shares his journey of transitioning from a background in International Tourism to becoming Senior Web Developer, tackling factory jobs, teaching English to Korean students, and growing rapidly in Korea's tech industry.</span>
-                <span class="item-desc">We explore his motivations for moving to Korea, his job-hunting challenges, the importance of speaking four languages – Uzbek, Russian, English, and Korean – and his experiences working on key projects in a fast-paced environment.</span>
-                <span class="item-meta">Recorded episode</span>
+                <span class="item-eyebrow">Episode 02 · <time datetime="2024-12-22">22 Dec 2024</time> · Recorded · 1 h 8 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=KQzGMGQfoJI">From Factory to Coding: A Journey Through Korea’s Tech World</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd>Alex (Aleksey Kim)</dd>
+                  <dt>Background</dt><dd>Senior web developer in Korea, originally from Uzbekistan</dd>
+                  <dt>Topic</dt><dd>Moving from factory work into software development in Korea</dd>
+                </dl>
+                <span class="item-desc">Alex shares his path from a background in international tourism, through factory jobs and teaching English to Korean students, to a senior web developer role.</span>
+                <details>
+                  <summary>Original description</summary>
+                  <p>In this episode, we sit down with Alex, a dynamic personality who has charted an incredible path from Uzbekistan to South Korea. Alex shares his journey of transitioning from a background in International Tourism to becoming Senior Web Developer, tackling factory jobs, teaching English to Korean students, and growing rapidly in Korea's tech industry.</p>
+                  <p>We explore his motivations for moving to Korea, his job-hunting challenges, the importance of speaking four languages – Uzbek, Russian, English, and Korean – and his experiences working on key projects in a fast-paced environment.</p>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=KQzGMGQfoJI">Watch on YouTube</a></span>
               </div>
             </li>
-            <li class="video-card">
+            <li class="video-card" id="episode-03">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=XJVF55CMPG4" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/XJVF55CMPG4/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=XJVF55CMPG4">Podkast (3) Dasturlashga intilish va Koreyadagi muvaffaqiyatlar: Anvarbek Ziyodov bilan suhbat</a></strong>
-                <span class="item-desc">Ушбу подкастда Кореяда IT соҳасида муваффақият қозонган Анварбек Зиёдов билан суҳбатлашамиз. Унинг таълим олиш йўли, Кореяга келиб дастурлашни ўрганиш жараёни, ҳамда иш жараёнларида учраган қийинчиликлари ҳақида батафсил маълумот берамиз.</span>
-                <span class="item-meta">Recorded episode</span>
+                <span class="item-eyebrow">Episode 03 · <time datetime="2025-01-01">1 Jan 2025</time> · Recorded · 1 h 4 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=XJVF55CMPG4" lang="uz">Dasturlashga intilish va Koreyadagi muvaffaqiyatlar</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd>Anvarbek Ziyodov</dd>
+                  <dt>Background</dt><dd>Works in the IT industry in Korea</dd>
+                  <dt>Topic</dt><dd>Striving toward programming and succeeding in Korea</dd>
+                </dl>
+                <span class="item-desc">Anvarbek describes his education, how he learned programming after coming to Korea, and the difficulties he met at work.</span>
+                <details>
+                  <summary>Original description</summary>
+                  <p lang="uz-Cyrl">Ушбу подкастда Кореяда IT соҳасида муваффақият қозонган Анварбек Зиёдов билан суҳбатлашамиз. Унинг таълим олиш йўли, Кореяга келиб дастурлашни ўрганиш жараёни, ҳамда иш жараёнларида учраган қийинчиликлари ҳақида батафсил маълумот берамиз.</p>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=XJVF55CMPG4">Watch on YouTube</a></span>
               </div>
             </li>
-            <li class="video-card">
+            <li class="video-card" id="episode-04">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=v99dsqMlwUY" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/v99dsqMlwUY/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=v99dsqMlwUY">PODKAST # 4 – Jonli Suhbat: Bekzod Rizo bilan!</a></strong>
-                <span class="item-desc">Mavzu: “Web dasturlashni o‘rganish va o‘rgatish”</span>
-                <ul class="item-topics">
-                  <li>Dasturlashga kirib kelish tarixi</li>
-                  <li>Koreyada dasturchi sifatida ish topish va ish muhitining farqlari</li>
-                  <li>Web dasturlash tillari va eng yaxshi texnologiyalar</li>
-                  <li>DevEx loyihasi va IT sohasi bo‘yicha maslahatlar</li>
-                  <li>Yangi texnologiyalar va o‘zini rivojlantirish strategiyalari</li>
-                </ul>
-                <span class="item-meta">Live stream</span>
+                <span class="item-eyebrow">Episode 04 · <time datetime="2025-02-09">9 Feb 2025</time> · Live stream · 3 h 16 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=v99dsqMlwUY" lang="uz">Web dasturlashni o‘rganish va o‘rgatish</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd>Bekzod Rizo</dd>
+                  <dt>Topic</dt><dd>Learning and teaching web development</dd>
+                </dl>
+                <details>
+                  <summary>Topics discussed</summary>
+                  <ul class="item-topics" lang="uz">
+                    <li>Dasturlashga kirib kelish tarixi</li>
+                    <li>Koreyada dasturchi sifatida ish topish va ish muhitining farqlari</li>
+                    <li>Web dasturlash tillari va eng yaxshi texnologiyalar</li>
+                    <li>DevEx loyihasi va IT sohasi bo‘yicha maslahatlar</li>
+                    <li>Yangi texnologiyalar va o‘zini rivojlantirish strategiyalari</li>
+                  </ul>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=v99dsqMlwUY">Watch on YouTube</a></span>
               </div>
             </li>
-            <li class="video-card">
+            <li class="video-card" id="episode-05">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=ssKAomfmxJ0" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/ssKAomfmxJ0/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=ssKAomfmxJ0">PODKAST #5 – Jonli Suhbat: Bekhzod Olimov bilan!</a></strong>
-                <span class="item-desc">Mavzu: “Sun’iy intellektni o‘rganish va uni boshqalarga o‘rgatish”</span>
-                <ul class="item-topics">
-                  <li>Dasturlashga kirib kelish tarixi va ilk qadamlar</li>
-                  <li>Koreyada dasturchi sifatida ish topish va ish muhiti</li>
-                  <li>AI texnologiyalari va ularning rivojlanishi</li>
-                  <li>Yangi boshlayotganlarga foydali maslahatlar</li>
-                  <li>Shaxsiy rivojlanish va zamonaviy texnologiyalarni o‘zlashtirish strategiyalari</li>
-                </ul>
-                <span class="item-meta">Live stream</span>
+                <span class="item-eyebrow">Episode 05 · <time datetime="2025-05-11">11 May 2025</time> · Live stream · 1 h 32 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=ssKAomfmxJ0" lang="uz">Sun’iy intellektni o‘rganish va uni boshqalarga o‘rgatish</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd>Bekhzod Olimov</dd>
+                  <dt>Topic</dt><dd>Learning artificial intelligence and teaching it to others</dd>
+                </dl>
+                <details>
+                  <summary>Topics discussed</summary>
+                  <ul class="item-topics" lang="uz">
+                    <li>Dasturlashga kirib kelish tarixi va ilk qadamlar</li>
+                    <li>Koreyada dasturchi sifatida ish topish va ish muhiti</li>
+                    <li>AI texnologiyalari va ularning rivojlanishi</li>
+                    <li>Yangi boshlayotganlarga foydali maslahatlar</li>
+                    <li>Shaxsiy rivojlanish va zamonaviy texnologiyalarni o‘zlashtirish strategiyalari</li>
+                  </ul>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=ssKAomfmxJ0">Watch on YouTube</a></span>
               </div>
             </li>
-            <li class="video-card">
+            <li class="video-card" id="episode-06">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=AbdJpJ-JTAE" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/AbdJpJ-JTAE/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=AbdJpJ-JTAE">PODCAST #6 – Жонли суҳбат: Ахроржон Рахмонов, PhD билан!</a></strong>
-                <span class="item-desc">Mavzu: “AI соҳасидаги ўзгаришлар, Computer Vision, NLP ва AI Engineer бўлиш йўли”</span>
-                <ul class="item-topics">
-                  <li>Dasturlashga kirib kelish tarixi va ilk qadamlar</li>
-                  <li>Kyungpook National University’да PhD тажрибаси ва илмий тадқиқот йўли</li>
-                  <li>AI texnologiyalari va ularning rivojlanishi</li>
-                  <li>Кореяда AI Researcher ва AI Engineer сифатида ишлаш муҳити</li>
-                  <li>Yangi boshlayotganlarga foydali maslahatlar</li>
-                  <li>Shaxsiy rivojlanish va zamonaviy texnologiyalarni o‘zlashtirish strategiyalari</li>
-                  <li>Илмий мақола ёзиш, research mindset ва career growth ҳақида суҳбат</li>
-                </ul>
-                <span class="item-meta">Live stream</span>
+                <span class="item-eyebrow">Episode 06 · <time datetime="2026-05-03">3 May 2026</time> · Live stream · 1 h 45 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=AbdJpJ-JTAE" lang="uz-Cyrl">AI соҳасидаги ўзгаришлар, Computer Vision, NLP ва AI Engineer бўлиш йўли</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd><span lang="uz-Cyrl">Ахроржон Рахмонов</span>, PhD</dd>
+                  <dt>Background</dt><dd>Ph.D. research at Kyungpook National University; works in AI in Korea</dd>
+                  <dt>Topic</dt><dd>Changes in the AI field, computer vision, NLP and the path to becoming an AI engineer</dd>
+                </dl>
+                <details>
+                  <summary>Topics discussed</summary>
+                  <ul class="item-topics" lang="uz">
+                    <li>Dasturlashga kirib kelish tarixi va ilk qadamlar</li>
+                    <li>Kyungpook National University’да PhD тажрибаси ва илмий тадқиқот йўли</li>
+                    <li>AI texnologiyalari va ularning rivojlanishi</li>
+                    <li>Кореяда AI Researcher ва AI Engineer сифатида ишлаш муҳити</li>
+                    <li>Yangi boshlayotganlarga foydali maslahatlar</li>
+                    <li>Shaxsiy rivojlanish va zamonaviy texnologiyalarni o‘zlashtirish strategiyalari</li>
+                    <li>Илмий мақола ёзиш, research mindset ва career growth ҳақида суҳбат</li>
+                  </ul>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=AbdJpJ-JTAE">Watch on YouTube</a></span>
               </div>
             </li>
-            <li class="video-card">
+            <li class="video-card" id="episode-07">
               <a class="video-card__thumb" href="https://www.youtube.com/watch?v=fmw5Wl4iHxM" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/fmw5Wl4iHxM/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="video-card__body">
-                <strong><a href="https://www.youtube.com/watch?v=fmw5Wl4iHxM">PODCAST #7 – Жонли суҳбат: Жасур Собиржонов билан!</a></strong>
-                <span class="item-desc">Мавзу: “Senior Web дастурчи, Mango Market асосчиси ва Ўзбекистонда marketplace қуриш тажрибаси”</span>
-                <ul class="item-topics">
-                  <li>Бизнес таълимидан software development ва startup’гача бўлган йўл</li>
-                  <li>Кореяда ўқиш, ишлаш ва ecommerce тажрибаси</li>
-                  <li>Kupay, Arames/Azon Market каби Korean halal ecommerce platform’аларини бошқариш тажрибаси</li>
-                  <li>Full-stack developer сифатида ўсиш ва outsourcing project’лардан олинган сабоқлар</li>
-                  <li>Calculator app: оддий муаммодан маҳсулот яратиш тажрибаси</li>
-                  <li>Mango Market ғояси, Karrot Market модели ва Ўзбекистон бозорига мослаштириш</li>
-                  <li>P2P, second-hand market ва “Малика” каби анъанавий бозорлар келажаги</li>
-                  <li>Ўзбекистонда микроқарзлар, истеъмол маданияти ва second-hand иқтисодиёти</li>
-                  <li>1.5 йиллик меҳнат, launch жараёни ва Google Play’да 50,000+ юкланишга эришиш</li>
-                  <li>Ёш дастурчилар ва startup бошламоқчи бўлганлар учун амалий маслаҳатлар</li>
-                </ul>
-                <span class="item-meta">Live stream</span>
+                <span class="item-eyebrow">Episode 07 · <time datetime="2026-05-17">17 May 2026</time> · Live stream · 57 min</span>
+                <strong><a href="https://www.youtube.com/watch?v=fmw5Wl4iHxM" lang="uz-Cyrl">Senior Web дастурчи, Mango Market асосчиси ва Ўзбекистонда marketplace қуриш тажрибаси</a></strong>
+                <dl class="facts">
+                  <dt>Guest</dt><dd><span lang="uz-Cyrl">Жасур Собиржонов</span></dd>
+                  <dt>Background</dt><dd>Senior web developer and founder of Mango Market</dd>
+                  <dt>Topic</dt><dd>The experience of building a marketplace in Uzbekistan</dd>
+                </dl>
+                <details>
+                  <summary>Topics discussed</summary>
+                  <ul class="item-topics" lang="uz-Cyrl">
+                    <li>Бизнес таълимидан software development ва startup’гача бўлган йўл</li>
+                    <li>Кореяда ўқиш, ишлаш ва ecommerce тажрибаси</li>
+                    <li>Kupay, Arames/Azon Market каби Korean halal ecommerce platform’аларини бошқариш тажрибаси</li>
+                    <li>Full-stack developer сифатида ўсиш ва outsourcing project’лардан олинган сабоқлар</li>
+                    <li>Calculator app: оддий муаммодан маҳсулот яратиш тажрибаси</li>
+                    <li>Mango Market ғояси, Karrot Market модели ва Ўзбекистон бозорига мослаштириш</li>
+                    <li>P2P, second-hand market ва “Малика” каби анъанавий бозорлар келажаги</li>
+                    <li>Ўзбекистонда микроқарзлар, истеъмол маданияти ва second-hand иқтисодиёти</li>
+                    <li>1.5 йиллик меҳнат, launch жараёни ва Google Play’да 50,000+ юкланишга эришиш</li>
+                    <li>Ёш дастурчилар ва startup бошламоқчи бўлганлар учун амалий маслаҳатлар</li>
+                  </ul>
+                </details>
+                <span class="item-meta"><a href="https://www.youtube.com/watch?v=fmw5Wl4iHxM">Watch on YouTube</a></span>
               </div>
             </li>
           </ul>
           <p>More on the <a href="https://www.youtube.com/@mirzaev_muzaffar">YouTube channel</a>.</p>
         </section>
         <section class="tab-panel" role="tabpanel" id="it" aria-labelledby="tab-it">
-          <p>IT-related posts are coming soon.</p>
+          <h2 class="tab-panel__title">IT</h2>
+          <p>Engineering notes on robotics software, AMR control systems, digital twins and industrial web applications. The first articles are in preparation.</p>
+          <!-- To publish an article: copy blog/articles/_template.html to blog/articles/<slug>.html,
+               write it, then turn the title below into a link, replace the status label with
+               <time class="item-date" datetime="YYYY-MM-DD">D Mon YYYY</time> and move the item to the top. -->
+          <ul class="content-list article-list">
+            <li>
+              <span class="article-list__text">
+                <strong>Building a Vendor-Neutral AMR Control System</strong>
+                <span class="item-meta">Robotics · AMR · Architecture</span>
+              </span>
+              <span class="status status--planned">Coming soon</span>
+            </li>
+            <!-- Hidden for now. Move an item above this comment to show it.
+            <li>
+              <span class="article-list__text">
+                <strong>Connecting Digital Twins with Real-World Factory Operations</strong>
+                <span class="item-meta">Digital Twin · Smart Factory</span>
+              </span>
+              <span class="status status--planned">Coming soon</span>
+            </li>
+            <li>
+              <span class="article-list__text">
+                <strong>From Web Development to Robotics Software Engineering</strong>
+                <span class="item-meta">Career · Robotics</span>
+              </span>
+              <span class="status status--planned">Coming soon</span>
+            </li>
+            <li>
+              <span class="article-list__text">
+                <strong>ROS 2 and Fleet Manager Integration for Industrial AMRs</strong>
+                <span class="item-meta">ROS 2 · Fleet Management</span>
+              </span>
+              <span class="status status--planned">Coming soon</span>
+            </li>
+            <li>
+              <span class="article-list__text">
+                <strong>Simulation-Driven Validation of AMR Operations</strong>
+                <span class="item-meta">Simulation · Validation</span>
+              </span>
+              <span class="status status--planned">Coming soon</span>
+            </li>
+            -->
+          </ul>
         </section>
         <section class="tab-panel" role="tabpanel" id="personal" aria-labelledby="tab-personal">
+          <h2 class="tab-panel__title">Personal</h2>
           <ul class="content-list post-list">
-            <li class="post-card">
+            <li class="post-card" id="yeongwon-royal-tomb">
               <a class="post-card__video" href="https://www.youtube.com/shorts/4z0kct8Aui8" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/4z0kct8Aui8/oar2.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="post-card__photos" style="--columns: 6">
-                <a href="../images/blog/yeongwon-royal-tomb/01.jpg"><img src="../images/blog/yeongwon-royal-tomb/01.jpg" alt="Gravel path beside a wall in evening light" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/02.jpg"><img src="../images/blog/yeongwon-royal-tomb/02.jpg" alt="Sunlit clearing among pine trees" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/03.jpg"><img src="../images/blog/yeongwon-royal-tomb/03.jpg" alt="Golden light across a forest clearing" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/04.jpg"><img src="../images/blog/yeongwon-royal-tomb/04.jpg" alt="Gravel path below a stone retaining wall" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/05.jpg"><img src="../images/blog/yeongwon-royal-tomb/05.jpg" alt="Stone wall and fence along a forest path" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/06.jpg"><img src="../images/blog/yeongwon-royal-tomb/06.jpg" alt="Forest path under tall pines" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/07.jpg"><img src="../images/blog/yeongwon-royal-tomb/07.jpg" alt="Old wall with a tiled top in front of woodland" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/08.jpg"><img src="../images/blog/yeongwon-royal-tomb/08.jpg" alt="Long gravel path beside a wall under blue sky" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/09.jpg"><img src="../images/blog/yeongwon-royal-tomb/09.jpg" alt="Moss and grass growing on top of an old wall" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/10.jpg"><img src="../images/blog/yeongwon-royal-tomb/10.jpg" alt="Rice field glowing in evening sun" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/11.jpg"><img src="../images/blog/yeongwon-royal-tomb/11.jpg" alt="Red gate and shrine under a leaning pine" loading="lazy"></a>
-                <a href="../images/blog/yeongwon-royal-tomb/12.jpg"><img src="../images/blog/yeongwon-royal-tomb/12.jpg" alt="Traditional tiled-roof house among pine trees" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/01.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/01.jpg" alt="Gravel path beside a wall in evening light" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/02.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/02.jpg" alt="Sunlit clearing among pine trees" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/03.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/03.jpg" alt="Golden light across a forest clearing" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/04.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/04.jpg" alt="Gravel path below a stone retaining wall" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/05.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/05.jpg" alt="Stone wall and fence along a forest path" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/06.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/06.jpg" alt="Forest path under tall pines" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/07.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/07.jpg" alt="Old wall with a tiled top in front of woodland" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/08.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/08.jpg" alt="Long gravel path beside a wall under blue sky" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/09.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/09.jpg" alt="Moss and grass growing on top of an old wall" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/10.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/10.jpg" alt="Rice field glowing in evening sun" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/11.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/11.jpg" alt="Red gate and shrine under a leaning pine" loading="lazy"></a>
+                <a href="../images/blog/yeongwon-royal-tomb/12.jpg"><img src="../images/blog/yeongwon-royal-tomb/thumbs/12.jpg" alt="Traditional tiled-roof house among pine trees" loading="lazy"></a>
               </div>
               <div class="post-card__body">
                 <strong><a href="https://www.youtube.com/shorts/4z0kct8Aui8">A peaceful autumn evening at Yeongwon-Hoeinwon Royal Tomb Park</a> <time class="item-date" datetime="2026-09-06">6 Sep 2026</time></strong>
@@ -183,45 +320,45 @@
                 <span class="item-meta">Yeongwon-Hoeinwon Royal Tomb Park, Namyangju, South Korea</span>
               </div>
             </li>
-            <li class="post-card">
-              <a class="post-card__lead" href="../images/blog/anyangcheon/01.jpg"><img src="../images/blog/anyangcheon/01.jpg" alt="Apartment towers across the stream beside a bridge" loading="lazy"></a>
+            <li class="post-card" id="anyangcheon">
+              <a class="post-card__lead" href="../images/blog/anyangcheon/01.jpg"><img src="../images/blog/anyangcheon/thumbs/01.jpg" alt="Apartment towers across the stream beside a bridge" loading="lazy"></a>
               <div class="post-card__photos" style="--columns: 5">
-                <a href="../images/blog/anyangcheon/02.jpg"><img src="../images/blog/anyangcheon/02.jpg" alt="Riverside skate park and cycle path below apartment towers" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/03.jpg"><img src="../images/blog/anyangcheon/03.jpg" alt="Egrets in the reeds with apartment towers behind" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/04.jpg"><img src="../images/blog/anyangcheon/04.jpg" alt="Riverside footpath under a wide cloudy sky" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/05.jpg"><img src="../images/blog/anyangcheon/05.jpg" alt="Stepping stones across the stream" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/06.jpg"><img src="../images/blog/anyangcheon/06.jpg" alt="Sunflower field on the riverbank" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/07.jpg"><img src="../images/blog/anyangcheon/07.jpg" alt="Cycle path along the stream seen from above" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/08.jpg"><img src="../images/blog/anyangcheon/08.jpg" alt="Office towers and mist over a Gasan pavement" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/09.jpg"><img src="../images/blog/anyangcheon/09.jpg" alt="Street between glass office towers under a cloudy sky" loading="lazy"></a>
-                <a href="../images/blog/anyangcheon/10.jpg"><img src="../images/blog/anyangcheon/10.jpg" alt="Tree-lined riverside path" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/02.jpg"><img src="../images/blog/anyangcheon/thumbs/02.jpg" alt="Riverside skate park and cycle path below apartment towers" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/03.jpg"><img src="../images/blog/anyangcheon/thumbs/03.jpg" alt="Egrets in the reeds with apartment towers behind" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/04.jpg"><img src="../images/blog/anyangcheon/thumbs/04.jpg" alt="Riverside footpath under a wide cloudy sky" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/05.jpg"><img src="../images/blog/anyangcheon/thumbs/05.jpg" alt="Stepping stones across the stream" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/06.jpg"><img src="../images/blog/anyangcheon/thumbs/06.jpg" alt="Sunflower field on the riverbank" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/07.jpg"><img src="../images/blog/anyangcheon/thumbs/07.jpg" alt="Cycle path along the stream seen from above" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/08.jpg"><img src="../images/blog/anyangcheon/thumbs/08.jpg" alt="Office towers and mist over a Gasan pavement" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/09.jpg"><img src="../images/blog/anyangcheon/thumbs/09.jpg" alt="Street between glass office towers under a cloudy sky" loading="lazy"></a>
+                <a href="../images/blog/anyangcheon/10.jpg"><img src="../images/blog/anyangcheon/thumbs/10.jpg" alt="Tree-lined riverside path" loading="lazy"></a>
               </div>
-              <div class="post-card__body">
-                <strong>Янги иш ва Анян дарёси бўйи <time class="item-date" datetime="2026-09-02">2 Sep 2026</time></strong>
+              <div class="post-card__body" lang="uz-Cyrl">
+                <strong>Янги иш ва Анян дарёси бўйи <time class="item-date" lang="en" datetime="2026-09-02">2 Sep 2026</time></strong>
                 <span class="item-desc">Шу ойнинг бошида Сеул шаҳридаги Гасан Дижитал Комплексида жойлашган робототехника компаниясида дастурчи сифатида янги иш фаолиятимни бошладим.</span>
                 <span class="item-desc">Янги лавозимимда робототехника, автоном мобил роботлар, рақамли эгизаклар ва ишлаб чиқариш жараёнларини симуляция қилиш билан боғлиқ лойиҳалар устида ишлаш имкониятига эга бўламан.</span>
                 <span class="item-desc">Иш жойимнинг менга айниқса ёққан жиҳатларидан бири унинг яқиндаги Анян дарёси бўйидир. Гасан Сеулнинг гавжум технологик ва саноат ҳудудларидан бири бўлса-да, дарё бўйи сайр қилиш, дам олиш ва кувватни тиклаш учун ажойиб яшил маскандир.</span>
                 <span class="item-desc">Ушбу янги имкониятдан мамнунман ва олдиндаги профессионал сафаримни катта қизиқиш билан бошламоқдаман.</span>
-                <span class="item-meta">Anyangcheon stream, Gasan, Seoul, South Korea</span>
+                <span class="item-meta" lang="en">Anyangcheon stream, Gasan, Seoul, South Korea</span>
               </div>
             </li>
-            <li class="post-card">
+            <li class="post-card" id="keimyung-walk">
               <a class="post-card__video" href="https://www.youtube.com/watch?v=WOaaZvp-Z2E" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/WOaaZvp-Z2E/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="post-card__photos">
-                <a href="../images/blog/keimyung-walk/01.jpg"><img src="../images/blog/keimyung-walk/01.jpg" alt="Campus road and brick buildings under a clearing sky" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/02.jpg"><img src="../images/blog/keimyung-walk/02.jpg" alt="Sunset over a wet campus road" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/03.jpg"><img src="../images/blog/keimyung-walk/03.jpg" alt="Brick building on a hillside behind bare trees" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/04.jpg"><img src="../images/blog/keimyung-walk/04.jpg" alt="Pine trees in front of a campus building" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/05.jpg"><img src="../images/blog/keimyung-walk/05.jpg" alt="Brick building with glass corners in evening light" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/06.jpg"><img src="../images/blog/keimyung-walk/06.jpg" alt="Path under cherry blossoms with stone lanterns" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/07.jpg"><img src="../images/blog/keimyung-walk/07.jpg" alt="Cherry trees in bloom along a campus road" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/08.jpg"><img src="../images/blog/keimyung-walk/08.jpg" alt="Blossoming trees at a campus junction with hills behind" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/09.jpg"><img src="../images/blog/keimyung-walk/09.jpg" alt="Pink azaleas beside a tree trunk" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/10.jpg"><img src="../images/blog/keimyung-walk/10.jpg" alt="Bench on a wooded path with azaleas" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/11.jpg"><img src="../images/blog/keimyung-walk/11.jpg" alt="Path lined with cherry blossoms and azaleas" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/12.jpg"><img src="../images/blog/keimyung-walk/12.jpg" alt="Bee on a pink azalea flower" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/13.jpg"><img src="../images/blog/keimyung-walk/13.jpg" alt="White blossoms and pink azaleas in the woods" loading="lazy"></a>
-                <a href="../images/blog/keimyung-walk/14.jpg"><img src="../images/blog/keimyung-walk/14.jpg" alt="Poppies along a brick path on campus" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/01.jpg"><img src="../images/blog/keimyung-walk/thumbs/01.jpg" alt="Campus road and brick buildings under a clearing sky" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/02.jpg"><img src="../images/blog/keimyung-walk/thumbs/02.jpg" alt="Sunset over a wet campus road" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/03.jpg"><img src="../images/blog/keimyung-walk/thumbs/03.jpg" alt="Brick building on a hillside behind bare trees" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/04.jpg"><img src="../images/blog/keimyung-walk/thumbs/04.jpg" alt="Pine trees in front of a campus building" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/05.jpg"><img src="../images/blog/keimyung-walk/thumbs/05.jpg" alt="Brick building with glass corners in evening light" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/06.jpg"><img src="../images/blog/keimyung-walk/thumbs/06.jpg" alt="Path under cherry blossoms with stone lanterns" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/07.jpg"><img src="../images/blog/keimyung-walk/thumbs/07.jpg" alt="Cherry trees in bloom along a campus road" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/08.jpg"><img src="../images/blog/keimyung-walk/thumbs/08.jpg" alt="Blossoming trees at a campus junction with hills behind" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/09.jpg"><img src="../images/blog/keimyung-walk/thumbs/09.jpg" alt="Pink azaleas beside a tree trunk" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/10.jpg"><img src="../images/blog/keimyung-walk/thumbs/10.jpg" alt="Bench on a wooded path with azaleas" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/11.jpg"><img src="../images/blog/keimyung-walk/thumbs/11.jpg" alt="Path lined with cherry blossoms and azaleas" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/12.jpg"><img src="../images/blog/keimyung-walk/thumbs/12.jpg" alt="Bee on a pink azalea flower" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/13.jpg"><img src="../images/blog/keimyung-walk/thumbs/13.jpg" alt="White blossoms and pink azaleas in the woods" loading="lazy"></a>
+                <a href="../images/blog/keimyung-walk/14.jpg"><img src="../images/blog/keimyung-walk/thumbs/14.jpg" alt="Poppies along a brick path on campus" loading="lazy"></a>
               </div>
               <div class="post-card__body">
                 <strong><a href="https://www.youtube.com/watch?v=WOaaZvp-Z2E">After the Rain 🌧️ | Peaceful Walk at Keimyung University Campus</a> <time class="item-date" datetime="2026-03-12T17:19">12 Mar 2026 17:19</time></strong>
@@ -231,19 +368,19 @@
                 <span class="item-meta">Keimyung University, Daegu, South Korea</span>
               </div>
             </li>
-            <li class="post-card">
+            <li class="post-card" id="cbnu-autumn">
               <a class="post-card__video" href="https://www.youtube.com/watch?v=hF2ilgwK9T0" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/hF2ilgwK9T0/hqdefault.jpg" alt="" width="480" height="270" loading="lazy"></a>
               <div class="post-card__photos" style="--columns: 5">
-                <a href="../images/blog/cbnu-autumn/01.jpg"><img src="../images/blog/cbnu-autumn/01.jpg" alt="Woodland seen from a carpet of fallen leaves" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/02.jpg"><img src="../images/blog/cbnu-autumn/02.jpg" alt="Maple branches over a leaf-covered lawn" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/03.jpg"><img src="../images/blog/cbnu-autumn/03.jpg" alt="Wooden boardwalk climbing through yellow trees" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/04.jpg"><img src="../images/blog/cbnu-autumn/04.jpg" alt="Bright red maples at the edge of a car park" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/05.jpg"><img src="../images/blog/cbnu-autumn/05.jpg" alt="Red maple above heaps of fallen leaves" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/06.jpg"><img src="../images/blog/cbnu-autumn/06.jpg" alt="White daisies with red maples behind" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/07.jpg"><img src="../images/blog/cbnu-autumn/07.jpg" alt="Engineering buildings under heavy clouds" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/08.jpg"><img src="../images/blog/cbnu-autumn/08.jpg" alt="Sunlit cloud above pines at a campus junction" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/09.jpg"><img src="../images/blog/cbnu-autumn/09.jpg" alt="Campus road between bare trees at dusk" loading="lazy"></a>
-                <a href="../images/blog/cbnu-autumn/10.jpg"><img src="../images/blog/cbnu-autumn/10.jpg" alt="Brick pavement and lamp post beside tall trees" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/01.jpg"><img src="../images/blog/cbnu-autumn/thumbs/01.jpg" alt="Woodland seen from a carpet of fallen leaves" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/02.jpg"><img src="../images/blog/cbnu-autumn/thumbs/02.jpg" alt="Maple branches over a leaf-covered lawn" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/03.jpg"><img src="../images/blog/cbnu-autumn/thumbs/03.jpg" alt="Wooden boardwalk climbing through yellow trees" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/04.jpg"><img src="../images/blog/cbnu-autumn/thumbs/04.jpg" alt="Bright red maples at the edge of a car park" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/05.jpg"><img src="../images/blog/cbnu-autumn/thumbs/05.jpg" alt="Red maple above heaps of fallen leaves" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/06.jpg"><img src="../images/blog/cbnu-autumn/thumbs/06.jpg" alt="White daisies with red maples behind" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/07.jpg"><img src="../images/blog/cbnu-autumn/thumbs/07.jpg" alt="Engineering buildings under heavy clouds" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/08.jpg"><img src="../images/blog/cbnu-autumn/thumbs/08.jpg" alt="Sunlit cloud above pines at a campus junction" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/09.jpg"><img src="../images/blog/cbnu-autumn/thumbs/09.jpg" alt="Campus road between bare trees at dusk" loading="lazy"></a>
+                <a href="../images/blog/cbnu-autumn/10.jpg"><img src="../images/blog/cbnu-autumn/thumbs/10.jpg" alt="Brick pavement and lamp post beside tall trees" loading="lazy"></a>
               </div>
               <div class="post-card__body">
                 <strong><a href="https://www.youtube.com/watch?v=hF2ilgwK9T0">Peach Forest Serenity at Chungbuk National University 1-Minute Relaxation | 청주의 아름다운 충북대학교</a> <time class="item-date" datetime="2024-11-30T21:27">30 Nov 2024 21:27</time></strong>
@@ -252,34 +389,34 @@
                 <span class="item-meta">Chungbuk National University, Cheongju, South Korea</span>
               </div>
             </li>
-            <li class="post-card">
-              <a class="post-card__lead" href="../images/blog/ansan-2021/18.jpg"><img src="../images/blog/ansan-2021/18.jpg" alt="Autumn leaves beside a lake" loading="lazy"></a>
+            <li class="post-card" id="ansan-2021">
+              <a class="post-card__lead" href="../images/blog/ansan-2021/18.jpg"><img src="../images/blog/ansan-2021/thumbs/18.jpg" alt="Autumn leaves beside a lake" loading="lazy"></a>
               <div class="post-card__photos post-card__photos--scroll" style="--columns: 5">
-                <a href="../images/blog/ansan-2021/01.jpg"><img src="../images/blog/ansan-2021/01.jpg" alt="Sandy beach with swimmers and a breakwater" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/02.jpg"><img src="../images/blog/ansan-2021/02.jpg" alt="Path beside a stream on a rainy day" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/03.jpg"><img src="../images/blog/ansan-2021/03.jpg" alt="Lotus pond under a blue sky" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/04.jpg"><img src="../images/blog/ansan-2021/04.jpg" alt="Reed wetland with a boardwalk and a small water mill" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/05.jpg"><img src="../images/blog/ansan-2021/05.jpg" alt="Apartment towers behind a tree-lined road" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/06.jpg"><img src="../images/blog/ansan-2021/06.jpg" alt="Pebbly shore with seagulls under heavy clouds" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/07.jpg"><img src="../images/blog/ansan-2021/07.jpg" alt="Causeway across a tidal flat towards wind turbines" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/08.jpg"><img src="../images/blog/ansan-2021/08.jpg" alt="Pine trees and a pavilion on a coastal path" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/09.jpg"><img src="../images/blog/ansan-2021/09.jpg" alt="Wind turbines beyond a tidal pool" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/10.jpg"><img src="../images/blog/ansan-2021/10.jpg" alt="N Seoul Tower on the skyline at night" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/11.jpg"><img src="../images/blog/ansan-2021/11.jpg" alt="Boat crossing a bay under white clouds" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/12.jpg"><img src="../images/blog/ansan-2021/12.jpg" alt="Rocky stream bed between grassy banks" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/13.jpg"><img src="../images/blog/ansan-2021/13.jpg" alt="Han River with a bridge and the Seoul skyline" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/14.jpg"><img src="../images/blog/ansan-2021/14.jpg" alt="Han River framed by a riverside tree" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/15.jpg"><img src="../images/blog/ansan-2021/15.jpg" alt="Entrance sign of Heunginjimun Park in autumn" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/16.jpg"><img src="../images/blog/ansan-2021/16.jpg" alt="Cheonggyecheon stream with pigeons at the water's edge" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/17.jpg"><img src="../images/blog/ansan-2021/17.jpg" alt="Stepping stones and an egret in Cheonggyecheon stream" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/19.jpg"><img src="../images/blog/ansan-2021/19.jpg" alt="Rustic fence and fallen leaves on a lakeside path" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/20.jpg"><img src="../images/blog/ansan-2021/20.jpg" alt="Seoul city lights seen through bare trees" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/21.jpg"><img src="../images/blog/ansan-2021/21.jpg" alt="N Seoul Tower lit up at night" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/22.jpg"><img src="../images/blog/ansan-2021/22.jpg" alt="Seoul skyline at night from Namsan" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/23.jpg"><img src="../images/blog/ansan-2021/23.jpg" alt="Wind turbines and tidal flats seen over pine trees" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/24.jpg"><img src="../images/blog/ansan-2021/24.jpg" alt="Paintings on easels in an autumn park" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/25.jpg"><img src="../images/blog/ansan-2021/25.jpg" alt="Snow-covered path along a city stream" loading="lazy"></a>
-                <a href="../images/blog/ansan-2021/26.jpg"><img src="../images/blog/ansan-2021/26.jpg" alt="Lone pine in a snowy plaza at dusk" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/01.jpg"><img src="../images/blog/ansan-2021/thumbs/01.jpg" alt="Sandy beach with swimmers and a breakwater" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/02.jpg"><img src="../images/blog/ansan-2021/thumbs/02.jpg" alt="Path beside a stream on a rainy day" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/03.jpg"><img src="../images/blog/ansan-2021/thumbs/03.jpg" alt="Lotus pond under a blue sky" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/04.jpg"><img src="../images/blog/ansan-2021/thumbs/04.jpg" alt="Reed wetland with a boardwalk and a small water mill" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/05.jpg"><img src="../images/blog/ansan-2021/thumbs/05.jpg" alt="Apartment towers behind a tree-lined road" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/06.jpg"><img src="../images/blog/ansan-2021/thumbs/06.jpg" alt="Pebbly shore with seagulls under heavy clouds" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/07.jpg"><img src="../images/blog/ansan-2021/thumbs/07.jpg" alt="Causeway across a tidal flat towards wind turbines" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/08.jpg"><img src="../images/blog/ansan-2021/thumbs/08.jpg" alt="Pine trees and a pavilion on a coastal path" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/09.jpg"><img src="../images/blog/ansan-2021/thumbs/09.jpg" alt="Wind turbines beyond a tidal pool" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/10.jpg"><img src="../images/blog/ansan-2021/thumbs/10.jpg" alt="N Seoul Tower on the skyline at night" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/11.jpg"><img src="../images/blog/ansan-2021/thumbs/11.jpg" alt="Boat crossing a bay under white clouds" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/12.jpg"><img src="../images/blog/ansan-2021/thumbs/12.jpg" alt="Rocky stream bed between grassy banks" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/13.jpg"><img src="../images/blog/ansan-2021/thumbs/13.jpg" alt="Han River with a bridge and the Seoul skyline" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/14.jpg"><img src="../images/blog/ansan-2021/thumbs/14.jpg" alt="Han River framed by a riverside tree" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/15.jpg"><img src="../images/blog/ansan-2021/thumbs/15.jpg" alt="Entrance sign of Heunginjimun Park in autumn" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/16.jpg"><img src="../images/blog/ansan-2021/thumbs/16.jpg" alt="Cheonggyecheon stream with pigeons at the water's edge" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/17.jpg"><img src="../images/blog/ansan-2021/thumbs/17.jpg" alt="Stepping stones and an egret in Cheonggyecheon stream" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/19.jpg"><img src="../images/blog/ansan-2021/thumbs/19.jpg" alt="Rustic fence and fallen leaves on a lakeside path" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/20.jpg"><img src="../images/blog/ansan-2021/thumbs/20.jpg" alt="Seoul city lights seen through bare trees" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/21.jpg"><img src="../images/blog/ansan-2021/thumbs/21.jpg" alt="N Seoul Tower lit up at night" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/22.jpg"><img src="../images/blog/ansan-2021/thumbs/22.jpg" alt="Seoul skyline at night from Namsan" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/23.jpg"><img src="../images/blog/ansan-2021/thumbs/23.jpg" alt="Wind turbines and tidal flats seen over pine trees" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/24.jpg"><img src="../images/blog/ansan-2021/thumbs/24.jpg" alt="Paintings on easels in an autumn park" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/25.jpg"><img src="../images/blog/ansan-2021/thumbs/25.jpg" alt="Snow-covered path along a city stream" loading="lazy"></a>
+                <a href="../images/blog/ansan-2021/26.jpg"><img src="../images/blog/ansan-2021/thumbs/26.jpg" alt="Lone pine in a snowy plaza at dusk" loading="lazy"></a>
               </div>
               <div class="post-card__body">
                 <strong>Learning to code in Ansan: weekends between study sessions <time class="item-date" datetime="2021-12">Jun – Dec 2021</time></strong>

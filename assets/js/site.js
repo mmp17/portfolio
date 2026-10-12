@@ -44,11 +44,21 @@
       });
     }
 
-    function fromHash() {
-      var id = window.location.hash.slice(1);
-      return buttons.filter(function (button) {
-        return button.getAttribute('aria-controls') === id;
+    // The hash names a panel, or something inside one, such as a single post.
+    function openHash() {
+      var target = document.getElementById(window.location.hash.slice(1));
+      var panel = target && target.closest('[role="tabpanel"]');
+      var button = panel && buttons.filter(function (other) {
+        return other.getAttribute('aria-controls') === panel.id;
       })[0];
+      if (!button) {
+        return false;
+      }
+      select(button);
+      if (target !== panel) {
+        target.scrollIntoView();
+      }
+      return true;
     }
 
     buttons.forEach(function (button, index) {
@@ -68,14 +78,11 @@
       });
     });
 
-    window.addEventListener('hashchange', function () {
-      var button = fromHash();
-      if (button) {
-        select(button);
-      }
-    });
+    window.addEventListener('hashchange', openHash);
 
-    select(fromHash() || buttons[0]);
+    if (!openHash()) {
+      select(buttons[0]);
+    }
   }
 
   // Clicking a photo opens the post's photos in a full-screen carousel.

@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Projects · Muzaffar Mirzaev</title>
-    <meta name="description" content="Robotics, digital-twin, smart-factory and web application projects by Muzaffar Mirzaev.">
+    <meta name="description" content="Projects by Muzaffar Mirzaev: an AMR control system with ROS 2 and FlexSim digital-twin integration, smart-factory and AI applications, and web applications.">
+    <meta name="author" content="Muzaffar Mirzaev">
+    <link rel="canonical" href="https://mmp17.github.io/portfolio/projects/">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Muzaffar Mirzaev">
     <meta property="og:title" content="Projects · Muzaffar Mirzaev">
-    <meta property="og:description" content="Robotics, digital-twin, smart-factory and web application projects by Muzaffar Mirzaev.">
+    <meta property="og:description" content="Projects by Muzaffar Mirzaev: an AMR control system with ROS 2 and FlexSim digital-twin integration, smart-factory and AI applications, and web applications.">
+    <meta property="og:url" content="https://mmp17.github.io/portfolio/projects/">
+    <meta property="og:image" content="https://mmp17.github.io/portfolio/images/avatar.jpg">
+    <meta property="og:image:alt" content="Portrait of Muzaffar Mirzaev">
+    <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="../images/favicon.png">
@@ -15,6 +22,7 @@
     <script>document.documentElement.className = 'js';</script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="masthead">
       <div class="masthead__inner">
         <a class="masthead__brand" href="../index.html">Muzaffar Mirzaev</a>
@@ -25,18 +33,19 @@
             <li><a href="../projects/index.html" aria-current="page">Projects</a></li>
             <li><a href="../experience/index.html">Experience</a></li>
             <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../cv/index.html">Resume</a></li>
+            <li><a href="../resume/index.html">Resume</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <div class="main">
-      <aside class="sidebar">
+      <aside class="sidebar" aria-label="About the author">
         <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
         <div class="author__content">
-          <h2 class="author__name">Muzaffar Mirzaev, Ph.D.</h2>
-          <p class="author__bio">Building software for digital twins, autonomous mobile robots, AI vision and smart factories.</p>
+          <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
+          <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
+          <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
         </div>
         <div class="author__links">
           <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
@@ -50,71 +59,111 @@
         </div>
       </aside>
 
-      <main class="content">
-        <h1>Robotics &amp; Digital Twin</h1>
+      <main class="content" id="main">
+        <h1>Projects</h1>
+        <p>Recent work first: robotics and digital-twin software, then smart-factory and AI applications, followed by web applications and the earlier projects I learned on.</p>
+        <nav class="page-nav" aria-label="Project groups">
+          <a href="#robotics">Robotics &amp; Digital Twin</a>
+          <a href="#smart-factory">Smart Factory &amp; AI</a>
+          <a href="#web">Web Applications</a>
+          <a href="#earlier">Earlier Projects</a>
+        </nav>
+
+        <h2 id="robotics">Robotics &amp; Digital Twin</h2>
         <hr>
-        <ul class="content-list">
-          <li>
-            <strong>AMR Control System (ACS)</strong>
-            <span class="item-desc">Control system for autonomous mobile robot fleets covering mission management, fleet operations, robot integrations, alarms, recovery workflows and traceability.</span>
-            <span class="item-meta">Current role · 2026 – present</span>
-          </li>
-          <li>
-            <strong>ACS Web Dashboard</strong>
-            <span class="item-desc">Operations dashboard for the ACS built with Next.js, TypeScript, FastAPI, PostgreSQL, WebSocket communication and containerized services.</span>
-            <span class="item-meta">Next.js · TypeScript · FastAPI · PostgreSQL · WebSocket · Docker</span>
-          </li>
-          <li>
-            <strong>ROS 2 Fleet and Equipment Integration</strong>
-            <span class="item-desc">Integration of ROS 2 fleet management with map services, SLAM, AMCL localization and Nav2 navigation, plus PLC and IoT devices over industrial protocols to synchronize robot status, equipment signals, safety interlocks and operational events.</span>
-            <span class="item-meta">ROS 2 · Nav2 · SLAM Toolbox · AMCL · PLC / IoT</span>
-          </li>
-          <li>
-            <strong>FlexSim Digital-Twin Integration</strong>
-            <span class="item-desc">Connects operational workflows to FlexSim simulation to compare scenarios and KPIs such as throughput, utilization, waiting time and fleet sizing.</span>
-            <span class="item-meta">FlexSim · discrete-event simulation · KPI analysis</span>
-          </li>
-        </ul>
-        <h1>Smart Factory &amp; AI</h1>
+        <!-- Flagship project. Each row of the status table carries one status label:
+             <span class="status">In development</span>
+             <span class="status status--implemented">Implemented</span>
+             <span class="status status--prototype">Prototype</span>
+             <span class="status status--planned">Planned</span> -->
+        <article class="project project--flagship" id="acs">
+          <h3>AMR Control System (ACS)</h3>
+          <span class="role__meta">Principal Software Engineer · Robotics technology company, Seoul · Sep 2026 – present</span>
+          <p class="project__summary">A control system for autonomous mobile robot fleets. It turns factory orders into robot missions, dispatches and monitors them, supports recovery when something fails, and keeps a record of what happened.</p>
+          <dl class="case">
+            <dt>Problem</dt>
+            <dd>An AMR fleet needs a layer between factory operations and the robots. Orders have to become missions, missions have to be dispatched and followed through execution, and operators need to see what is happening and recover when a robot, a station or a piece of equipment does not behave as planned. That layer should not be tied to a single robot vendor.</dd>
+            <dt>My contribution</dt>
+            <dd>Responsible for the architecture and development of the system across the operations dashboard, the backend services, and the integration layer toward robots, factory equipment and simulation.</dd>
+            <dt>Architecture</dt>
+            <dd>
+              <ul>
+                <li><strong>Operations application.</strong> A Next.js and TypeScript dashboard on a FastAPI backend with PostgreSQL, running as containerized services. It covers mission management, fleet operations, map and station management, and alarms and events.</li>
+                <li><strong>Mission lifecycle.</strong> A mission is tracked from order and dispatch through execution to completion or failure, with recovery workflows for the failure cases and an audit trail for traceability.</li>
+                <li><strong>Real-time state.</strong> Robot and mission status reach the dashboard over WebSocket.</li>
+                <li><strong>Robot integration.</strong> A fleet-manager and robot-adapter layer separates the control logic from the robot side. Robots are integrated through ROS 2, with Nav2 navigation, AMCL localization and SLAM mapping.</li>
+                <li><strong>Equipment integration.</strong> PLC and IoT devices are connected over industrial communication protocols to synchronize robot status, equipment signals, safety interlocks and operational events.</li>
+                <li><strong>Simulation.</strong> Operational workflows are connected to a FlexSim digital-twin model.</li>
+              </ul>
+            </dd>
+            <dt>Validation</dt>
+            <dd>The FlexSim integration is used to compare scenarios on KPIs such as throughput, utilization, waiting time and fleet sizing. The system is under active development, so no production results are reported here.</dd>
+          </dl>
+          <!-- Status table, hidden for now. Remove this comment line and the closing one to show it.
+          <div class="table-wrap">
+            <table class="table table--status">
+              <caption>Current status by area</caption>
+              <thead>
+                <tr><th scope="col">Area</th><th scope="col">Scope</th><th scope="col">Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Operations dashboard and backend</th><td>Missions, fleet, maps and stations, alarms and events, recovery, audit</td><td><span class="status">In development</span></td></tr>
+                <tr><th scope="row">ROS 2 fleet integration</th><td>Fleet manager and robot adapters, Nav2, AMCL, SLAM</td><td><span class="status">In development</span></td></tr>
+                <tr><th scope="row">PLC and IoT integration</th><td>Equipment signals, safety interlocks, operational events</td><td><span class="status">In development</span></td></tr>
+                <tr><th scope="row">FlexSim digital twin</th><td>Scenario and KPI comparison</td><td><span class="status">In development</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          -->
+          <p class="project__note">Customer, site and equipment details are left out for confidentiality.</p>
+          <span class="item-meta">Next.js · TypeScript · FastAPI · PostgreSQL · WebSocket · Docker · ROS 2 · Nav2 · AMCL · SLAM Toolbox · PLC / IoT · FlexSim</span>
+        </article>
+        <article class="project">
+          <h3><a href="https://www.youtube.com/watch?v=2NpCmEO0aRI">Production Simulation: Digital-Twin Simulation and Remote Control</a></h3>
+          <span class="role__meta">Top Core System · Frontend · demo video</span>
+          <p class="project__summary">WebGL production simulation with a 3D simulation view, simulation input forms, report pages, an admin area for image upload and configuration, and a dark mode.</p>
+        </article>
+        <article class="project">
+          <h3>AI Robot for Smart Factory: Web GUI</h3>
+          <span class="role__meta">Top Core System · Frontend / full-stack</span>
+          <p class="project__summary">Web interface for an AI robot system, bringing robotics and AI outputs into a usable dashboard with backend API integration and real-time updates over WebSocket and Socket.IO.</p>
+        </article>
+
+        <h2 id="smart-factory">Smart Factory &amp; AI</h2>
         <hr>
-        <ul class="content-list">
-          <li>
-            <strong><a href="https://topcore.co.kr/closet">Hi Closet: 3D-Based Smart Locker Management Platform</a></strong>
-            <span class="item-desc">Web-based smart locker management system developed at <a href="https://topcore.co.kr/">Top Core System</a>. Covers locker allocation for employees and partners, real-time 3D visualization and floor management, quick search by employee ID or department, alarms for unassigned employees, and admin tools for status and history tracking.</span>
-            <span class="item-meta">Frontend · <a href="https://www.youtube.com/watch?v=r7cs8Pg3i_U">demo video</a></span>
-          </li>
-          <li>
-            <strong><a href="https://www.youtube.com/watch?v=YAZbQ9Yz190">HiWMS: AI-Powered Smart Logistics Management</a></strong>
-            <span class="item-desc">Logistics platform for warehouse and factory operations with inbound, outbound and inventory workflows, real-time monitoring dashboards and an admin portal. I built the responsive dashboards and admin UI in React and Next.js and integrated backend APIs and real-time updates over WebSocket and Socket.IO.</span>
-            <span class="item-meta">Frontend / full-stack · demo video · <a href="https://github.com/mmp17/hi-wms-dashboard">dashboard repository</a></span>
-          </li>
-          <li>
-            <strong><a href="https://www.youtube.com/watch?v=2NpCmEO0aRI">Production Simulation: Digital-Twin Simulation and Remote Control</a></strong>
-            <span class="item-desc">WebGL production simulation with a 3D simulation view, simulation input forms, report pages, an admin area for image upload and configuration, and a dark mode.</span>
-            <span class="item-meta">Frontend · demo video</span>
-          </li>
-          <li>
-            <strong>3D-Based Operation and Maintenance Training Platform</strong>
-            <span class="item-desc">Computer-based training platform that combines high-fidelity 3D models with procedural simulation: part exploration, step-by-step maintenance workflows, remote training and assessment. I developed the frontend for the 3D interaction workflows, designed the component-tree and procedure navigation, integrated backend APIs and simulation data, and implemented role-based access and session management.</span>
-            <span class="item-meta">Frontend / system integration</span>
-          </li>
-          <li>
-            <strong>AI Robot for Smart Factory: Web GUI</strong>
-            <span class="item-desc">Web interface for an AI robot system, bringing robotics and AI outputs into a usable dashboard with backend API integration and real-time updates over WebSocket and Socket.IO.</span>
-            <span class="item-meta">Frontend / full-stack</span>
-          </li>
-          <li>
-            <strong>AI Vision, OCR and Worker-Safety Dashboards</strong>
-            <span class="item-desc">Frontend and full-stack work across several AI-driven platforms: vision inspection with real-time monitoring, automatic document and drawing recognition with OCR review workflows, and worker behavior monitoring with safety event detection, alert dashboards and incident reporting. AI inference results are integrated through REST APIs and WebSocket.</span>
-            <span class="item-meta">React · Next.js · TypeScript · Python</span>
-          </li>
-          <li>
-            <strong><a href="https://topcore.co.kr/">Top Core System Corporate Website</a></strong>
-            <span class="item-desc">Company website for Top Core System.</span>
-            <span class="item-meta">Frontend</span>
-          </li>
-        </ul>
-        <h1>Web Applications</h1>
+        <p>Built as Senior Software Engineer at <a href="https://topcore.co.kr/">Top Core System</a> between May 2024 and February 2026.</p>
+        <article class="project">
+          <h3><a href="https://www.youtube.com/watch?v=YAZbQ9Yz190">HiWMS: AI-Powered Smart Logistics Management</a></h3>
+          <span class="role__meta">Frontend / full-stack · demo video · <a href="https://github.com/mmp17/hi-wms-dashboard">dashboard repository</a></span>
+          <dl class="case">
+            <dt>Product</dt>
+            <dd>Logistics platform for warehouse and factory operations with inbound, outbound and inventory workflows, real-time monitoring dashboards and an admin portal.</dd>
+            <dt>My contribution</dt>
+            <dd>Built the responsive dashboards and admin UI in React and Next.js, and integrated backend APIs and real-time updates over WebSocket and Socket.IO.</dd>
+          </dl>
+        </article>
+        <article class="project">
+          <h3><a href="https://topcore.co.kr/closet">Hi Closet: 3D-Based Smart Locker Management Platform</a></h3>
+          <span class="role__meta">Frontend · <a href="https://www.youtube.com/watch?v=r7cs8Pg3i_U">demo video</a></span>
+          <p class="project__summary">Web-based smart locker management system. Covers locker allocation for employees and partners, real-time 3D visualization and floor management, quick search by employee ID or department, alarms for unassigned employees, and admin tools for status and history tracking.</p>
+        </article>
+        <article class="project">
+          <h3>3D-Based Operation and Maintenance Training Platform</h3>
+          <span class="role__meta">Frontend / system integration</span>
+          <dl class="case">
+            <dt>Product</dt>
+            <dd>Computer-based training platform that combines high-fidelity 3D models with procedural simulation: part exploration, step-by-step maintenance workflows, remote training and assessment.</dd>
+            <dt>My contribution</dt>
+            <dd>Developed the frontend for the 3D interaction workflows, designed the component-tree and procedure navigation, integrated backend APIs and simulation data, and implemented role-based access and session management.</dd>
+          </dl>
+        </article>
+        <article class="project">
+          <h3>AI Vision, OCR and Worker-Safety Dashboards</h3>
+          <span class="role__meta">React · Next.js · TypeScript · Python</span>
+          <p class="project__summary">Frontend and full-stack work across several AI-driven platforms: vision inspection with real-time monitoring, automatic document and drawing recognition with OCR review workflows, and worker behavior monitoring with safety event detection, alert dashboards and incident reporting. AI inference results are integrated through REST APIs and WebSocket.</p>
+        </article>
+
+        <h2 id="web">Web Applications</h2>
         <hr>
         <ul class="content-list">
           <li>
@@ -128,6 +177,11 @@
             <span class="item-meta">React · TypeScript · Redux · Node.js · Express · MongoDB · Socket.IO</span>
           </li>
           <li>
+            <strong><a href="https://topcore.co.kr/">Top Core System Corporate Website</a></strong>
+            <span class="item-desc">Company website for Top Core System.</span>
+            <span class="item-meta">Frontend</span>
+          </li>
+          <li>
             <strong><a href="https://www.nx3games.com/">NX3 Games Company Website</a></strong>
             <span class="item-desc">Fully responsive corporate website built with GSAP, ScrollMagic, Swiper, AOS and Slick. Team project with two frontend developers and one backend developer.</span>
             <span class="item-meta">JavaScript · GSAP</span>
@@ -137,6 +191,12 @@
             <span class="item-desc">Platform where young people in Cheonan can communicate, share suggestions and shape their local community. Team project with two frontend developers and one backend developer.</span>
             <span class="item-meta">Vue · Nuxt · <a href="https://github.com/mmp17/youth6.0">repository</a></span>
           </li>
+        </ul>
+
+        <h2 id="earlier">Earlier Projects</h2>
+        <hr>
+        <p>Smaller projects from my first years of web development, kept as a record of where I started.</p>
+        <ul class="content-list content-list--compact">
           <li>
             <strong><a href="https://barfe.netlify.app/index.html">Barfe: Mobile-Style Web App for Elderly People</a></strong>
             <span class="item-desc">Web application UI for elderly and disabled users with Transportation, Facilities and Travel Course sections. Solo project.</span>
