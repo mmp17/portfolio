@@ -157,58 +157,7 @@
     });
   }
 
-  function themeToggle() {
-    var button = document.querySelector('.theme-toggle');
-    var media = window.matchMedia('(prefers-color-scheme: dark)');
-
-    function current() {
-      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    }
-
-    function paint(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) {
-        meta.setAttribute('content', theme === 'dark' ? '#121411' : '#f3f1ec');
-      }
-      if (!button) {
-        return;
-      }
-      var dark = theme === 'dark';
-      button.setAttribute('aria-pressed', dark ? 'true' : 'false');
-      button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-    }
-
-    paint(current());
-
-    if (button) {
-      button.addEventListener('click', function () {
-        var next = current() === 'dark' ? 'light' : 'dark';
-        try {
-          localStorage.setItem('theme', next);
-        } catch (e) {
-          /* Storage can be blocked; the choice still applies for this visit. */
-        }
-        paint(next);
-      });
-    }
-
-    media.addEventListener('change', function (event) {
-      var stored = null;
-      try {
-        stored = localStorage.getItem('theme');
-      } catch (e) {
-        stored = null;
-      }
-      if (stored === 'light' || stored === 'dark') {
-        return;
-      }
-      paint(event.matches ? 'dark' : 'light');
-    });
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
-    themeToggle();
     toggle(document.querySelector('.nav-toggle'), document.getElementById('site-nav'));
     toggle(document.querySelector('.author__follow'), document.getElementById('author-urls'));
     tabs(document.querySelector('.tabs'));
