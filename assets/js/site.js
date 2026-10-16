@@ -1,6 +1,88 @@
 (function () {
   'use strict';
 
+  /* ==========================================================================
+     Toast Notification System
+     ========================================================================== */
+  function showToast(message, duration) {
+    duration = duration || 2600;
+    var toast = document.getElementById('site-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.id = 'site-toast';
+      toast.className = 'site-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+
+    if (toast._timer) {
+      clearTimeout(toast._timer);
+    }
+    toast._timer = setTimeout(function () {
+      toast.classList.remove('is-visible');
+    }, duration);
+  }
+
+  /* ==========================================================================
+     Theme Toggle (Dark / Light)
+     ========================================================================== */
+  function themeToggle() {
+    var button = document.querySelector('.theme-toggle');
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+    function current() {
+      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    }
+
+    function paint(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute('content', theme === 'dark' ? '#0b0f17' : '#f8fafc');
+      }
+      if (!button) {
+        return;
+      }
+      var dark = theme === 'dark';
+      button.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+
+    paint(current());
+
+    if (button) {
+      button.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        try {
+          localStorage.setItem('theme', next);
+        } catch (e) {
+          /* Storage can be blocked; the choice still applies for this visit. */
+        }
+        paint(next);
+        showToast(next === 'dark' ? 'Dark mode enabled' : 'Light mode enabled', 1800);
+      });
+    }
+
+    media.addEventListener('change', function (event) {
+      var stored = null;
+      try {
+        stored = localStorage.getItem('theme');
+      } catch (e) {
+        stored = null;
+      }
+      if (stored === 'light' || stored === 'dark') {
+        return;
+      }
+      paint(event.matches ? 'dark' : 'light');
+    });
+  }
+
+  /* ==========================================================================
+     Disclosure & Dropdown Toggles (Mobile Menu & Follow)
+     ========================================================================== */
   function toggle(button, target) {
     if (!button || !target) {
       return;
@@ -28,6 +110,9 @@
     });
   }
 
+  /* ==========================================================================
+     Tab Navigation (Blog & Sections)
+     ========================================================================== */
   function tabs(list) {
     if (!list) {
       return;
@@ -40,12 +125,15 @@
         var active = other === button;
         other.setAttribute('aria-selected', active ? 'true' : 'false');
         other.tabIndex = active ? 0 : -1;
-        document.getElementById(other.getAttribute('aria-controls')).hidden = !active;
+        var panel = document.getElementById(other.getAttribute('aria-controls'));
+        if (panel) {
+          panel.hidden = !active;
+        }
       });
     }
 
-    // The hash names a panel, or something inside one, such as a single post.
     function openHash() {
+      if (!window.location.hash) return false;
       var target = document.getElementById(window.location.hash.slice(1));
       var panel = target && target.closest('[role="tabpanel"]');
       var button = panel && buttons.filter(function (other) {
@@ -56,7 +144,7 @@
       }
       select(button);
       if (target !== panel) {
-        target.scrollIntoView();
+        target.scrollIntoView({ behavior: 'smooth' });
       }
       return true;
     }
@@ -80,12 +168,51 @@
 
     window.addEventListener('hashchange', openHash);
 
-    if (!openHash()) {
+    if (!openHash() && buttons.length) {
       select(buttons[0]);
     }
   }
 
-  // Clicking a photo opens the post's photos in a full-screen carousel.
+  /* ==========================================================================
+     Interactive Project Filter (Projects Page)
+     ========================================================================== */
+  function projectFilters() {
+    var container = document.querySelector('.project-filter-nav');
+    if (!container) return;
+
+    var filterBtns = container.querySelectorAll('.filter-btn');
+    var projectSections = document.querySelectorAll('.project-section');
+
+    function applyFilter(category) {
+      filterBtns.forEach(function (btn) {
+        var isCurrent = btn.getAttribute('data-filter') === category;
+        btn.classList.toggle('is-active', isCurrent);
+        btn.setAttribute('aria-pressed', isCurrent ? 'true' : 'false');
+      });
+
+      projectSections.forEach(function (sec) {
+        var secCat = sec.getAttribute('data-category');
+        if (category === 'all' || secCat === category) {
+          sec.style.display = '';
+          sec.classList.remove('is-hidden');
+        } else {
+          sec.style.display = 'none';
+          sec.classList.add('is-hidden');
+        }
+      });
+    }
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var cat = btn.getAttribute('data-filter');
+        applyFilter(cat);
+      });
+    });
+  }
+
+  /* ==========================================================================
+     Lightbox Image Gallery (Personal Blog Posts)
+     ========================================================================== */
   function gallery(card) {
     var links = Array.prototype.slice.call(card.querySelectorAll('.post-card__lead, .post-card__photos a'));
     if (!links.length || !window.HTMLDialogElement) {
@@ -117,7 +244,8 @@
     function show(index) {
       current = (index + links.length) % links.length;
       image.src = links[current].href;
-      image.alt = links[current].querySelector('img').alt;
+      var imgEl = links[current].querySelector('img');
+      image.alt = imgEl ? imgEl.alt : 'Photo';
       count.textContent = (current + 1) + ' / ' + links.length;
     }
 
@@ -141,7 +269,6 @@
       dialog.close();
     });
 
-    // A click on the dark area around the photo closes the carousel.
     dialog.addEventListener('click', function (event) {
       if (event.target === dialog || event.target.classList.contains('lightbox__stage')) {
         dialog.close();
@@ -157,70 +284,89 @@
     });
   }
 
-  function themeToggle() {
-    var button = document.querySelector('.theme-toggle');
-    var media = window.matchMedia('(prefers-color-scheme: dark)');
+  /* ==========================================================================
+     Email Copy & Mailto Handling
+     ========================================================================== */
+  function setupEmailCopy() {
+    document.querySelectorAll('.js-email').forEach(function (el) {
+      var user = el.getAttribute('data-user') || 'mirzaevmuzaffar';
+      var domain = el.getAttribute('data-domain') || 'gmail.com';
+      var address = user + '@' + domain;
 
-    function current() {
-      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    }
+      var wrapper = document.createElement('span');
+      wrapper.className = 'email-copy-wrap';
 
-    function paint(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) {
-        meta.setAttribute('content', theme === 'dark' ? '#121411' : '#f3f1ec');
-      }
-      if (!button) {
-        return;
-      }
-      var dark = theme === 'dark';
-      button.setAttribute('aria-pressed', dark ? 'true' : 'false');
-      button.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-    }
+      var link = document.createElement('a');
+      link.href = 'mailto:' + address;
+      link.textContent = el.hasAttribute('data-show') ? address : (el.textContent.trim() || 'Email');
+      link.title = 'Send email to ' + address;
 
-    paint(current());
+      var copyBtn = document.createElement('button');
+      copyBtn.type = 'button';
+      copyBtn.className = 'copy-email-btn';
+      copyBtn.setAttribute('aria-label', 'Copy email address to clipboard');
+      copyBtn.title = 'Copy email address';
+      copyBtn.innerHTML = '<svg class="icon icon--copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
 
-    if (button) {
-      button.addEventListener('click', function () {
-        var next = current() === 'dark' ? 'light' : 'dark';
-        try {
-          localStorage.setItem('theme', next);
-        } catch (e) {
-          /* Storage can be blocked; the choice still applies for this visit. */
+      copyBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(address).then(function () {
+            showToast('Copied ' + address + ' to clipboard!');
+          }).catch(function () {
+            prompt('Copy email address:', address);
+          });
+        } else {
+          prompt('Copy email address:', address);
         }
-        paint(next);
       });
-    }
 
-    media.addEventListener('change', function (event) {
-      var stored = null;
-      try {
-        stored = localStorage.getItem('theme');
-      } catch (e) {
-        stored = null;
-      }
-      if (stored === 'light' || stored === 'dark') {
-        return;
-      }
-      paint(event.matches ? 'dark' : 'light');
+      wrapper.appendChild(link);
+      wrapper.appendChild(copyBtn);
+      el.replaceWith(wrapper);
     });
   }
 
+  /* ==========================================================================
+     Back to Top Button
+     ========================================================================== */
+  function setupBackToTop() {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'Back to top of page');
+    btn.title = 'Back to top';
+    btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>';
+    document.body.appendChild(btn);
+
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          btn.classList.toggle('is-visible', window.scrollY > 350);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ==========================================================================
+     DOM Ready Initialization
+     ========================================================================== */
   document.addEventListener('DOMContentLoaded', function () {
     themeToggle();
     toggle(document.querySelector('.nav-toggle'), document.getElementById('site-nav'));
     toggle(document.querySelector('.author__follow'), document.getElementById('author-urls'));
     tabs(document.querySelector('.tabs'));
+    projectFilters();
     document.querySelectorAll('.post-card').forEach(gallery);
-
-    // The address is kept out of the markup; build the mailto link here.
-    document.querySelectorAll('.js-email').forEach(function (el) {
-      var address = el.getAttribute('data-user') + '@' + el.getAttribute('data-domain');
-      var link = document.createElement('a');
-      link.href = 'mailto:' + address;
-      link.textContent = el.hasAttribute('data-show') ? address : el.textContent;
-      el.replaceWith(link);
-    });
+    setupEmailCopy();
+    setupBackToTop();
   });
 })();

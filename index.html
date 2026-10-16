@@ -59,10 +59,10 @@
     <meta property="og:image" content="https://mmp17.github.io/portfolio/images/avatar.jpg">
     <meta property="og:image:alt" content="Portrait of Muzaffar Mirzaev">
     <meta name="twitter:card" content="summary">
-    <meta name="theme-color" content="#f3f1ec">
+    <meta name="theme-color" content="#f8fafc">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -76,7 +76,7 @@
         document.documentElement.setAttribute('data-theme', theme);
         var themeMeta = document.querySelector('meta[name="theme-color"]');
         if (themeMeta) {
-          themeMeta.setAttribute('content', theme === 'dark' ? '#121411' : '#f3f1ec');
+          themeMeta.setAttribute('content', theme === 'dark' ? '#0b0f17' : '#f8fafc');
         }
       } catch (e) {}
     </script>
@@ -87,101 +87,134 @@
       <div class="masthead__inner">
         <a class="masthead__brand" href="index.html">Muzaffar Mirzaev</a>
         <div class="masthead__end">
-        <nav class="site-nav" id="site-nav" aria-label="Main">
-          <ul>
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="projects/index.html">Projects</a></li>
-            <li><a href="experience/index.html">Experience</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
-            <li><a href="resume/index.html">Resume</a></li>
-          </ul>
-        </nav>
-        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+          <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+              <li><a href="index.html" aria-current="page">Home</a></li>
+              <li><a href="projects/index.html">Projects</a></li>
+              <li><a href="experience/index.html">Experience</a></li>
+              <li><a href="blog/index.html">Blog</a></li>
+              <li><a href="resume/index.html">Resume</a></li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
         </div>
       </div>
     </header>
 
     <div class="main">
       <aside class="sidebar" aria-label="About the author">
-        <img class="author__avatar" src="images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
-        <div class="author__content">
-          <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
-          <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
-          <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
-        </div>
-        <div class="author__links">
-          <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
-          <ul class="author__urls" id="author-urls">
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar">YouTube</a></li>
-          </ul>
+        <div class="sidebar__card">
+          <div class="author__avatar-wrap">
+            <img class="author__avatar" src="images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
+          </div>
+          <div class="author__content">
+            <div class="status-pill"><span class="status-dot"></span> Available for Advisory</div>
+            <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
+            <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
+            <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
+          </div>
+          <div class="author__links">
+            <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
+            <ul class="author__urls" id="author-urls">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+          </div>
         </div>
       </aside>
 
       <main class="content" id="main">
         <div class="hero">
+          <div class="hero__badge"><span class="status-dot"></span> Robotics &amp; Industrial AI Architecture</div>
           <p class="hero__name">Muzaffar Mirzaev, Ph.D.</p>
-          <h1>Principal Software Engineer <span class="hero__focus">Robotics &amp; Industrial AI</span></h1>
-          <p class="hero__lead">Building intelligent software that connects autonomous robots, factory operations, and digital-twin simulations.</p>
-          <p class="actions">
-            <a class="button button--primary" href="projects/index.html">View projects</a>
-            <a class="button" href="resume/index.html">Resume</a>
-          </p>
+          <h1>Principal Software Engineer <span class="hero__focus">Autonomous Robotics &amp; Industrial AI</span></h1>
+          <p class="hero__lead">Architecting intelligent software layers that connect autonomous mobile robots (AMR/AGV), smart factory operations, and digital-twin simulations.</p>
+          <div class="actions">
+            <a class="button button--primary" href="projects/index.html">View Projects &rarr;</a>
+            <a class="button" href="resume/index.html">Download Resume &darr;</a>
+          </div>
         </div>
-        <h2 id="work">Selected work</h2>
+
+        <!-- Quick Highlights Grid -->
+        <ul class="hero-stats">
+          <li class="hero-stat-card">
+            <span class="hero-stat__number">15+ Yrs</span>
+            <span class="hero-stat__label">Tech &amp; Systems Experience</span>
+          </li>
+          <li class="hero-stat-card">
+            <span class="hero-stat__number">Ph.D. &amp; MBA</span>
+            <span class="hero-stat__label">MIS (Keimyung) &amp; AIT</span>
+          </li>
+          <li class="hero-stat-card">
+            <span class="hero-stat__number">AMR Fleet</span>
+            <span class="hero-stat__label">ROS 2, Nav2 &amp; SLAM</span>
+          </li>
+          <li class="hero-stat-card">
+            <span class="hero-stat__number">Digital Twin</span>
+            <span class="hero-stat__label">FlexSim &amp; WebGL Simulation</span>
+          </li>
+        </ul>
+
+        <h2 id="work">Selected Work</h2>
         <hr>
         <ul class="work-grid">
           <li>
             <a class="work-card" href="projects/index.html#acs">
               <span class="work-card__kicker">Current · Robotics</span>
-              <strong>AMR Control System</strong>
+              <strong>AMR Control System (ACS)</strong>
               <span class="work-card__text">Turns factory orders into robot missions, then dispatches, monitors and recovers them across a ROS 2 fleet and a FlexSim digital twin.</span>
               <span class="work-card__more">View project</span>
             </a>
           </li>
           <li>
             <a class="work-card" href="projects/index.html#hiwms">
-              <span class="work-card__kicker">Smart factory</span>
-              <strong>HiWMS logistics platform</strong>
-              <span class="work-card__text">Warehouse dashboards for inbound, outbound and inventory, with real-time monitoring and an admin portal.</span>
+              <span class="work-card__kicker">Smart Factory</span>
+              <strong>HiWMS Logistics Platform</strong>
+              <span class="work-card__text">Warehouse dashboards for inbound, outbound and inventory, with real-time monitoring, AI integration and an admin portal.</span>
               <span class="work-card__more">View project</span>
             </a>
           </li>
           <li>
             <a class="work-card" href="projects/index.html#smart-factory">
-              <span class="work-card__kicker">Industrial AI</span>
-              <strong>Vision, OCR and 3D operations</strong>
+              <span class="work-card__kicker">Industrial AI &amp; 3D</span>
+              <strong>Vision, OCR &amp; Operations</strong>
               <span class="work-card__text">Operator interfaces for AI vision, document OCR, a 3D smart locker platform and a WebGL production simulation.</span>
               <span class="work-card__more">View project</span>
             </a>
           </li>
         </ul>
+
         <div class="intro">
           <p>I build the software layer between factory operations and autonomous mobile robots: AMR/AGV control systems, ROS 2 fleet integration, digital-twin simulation, and the web applications that operators use to run them. My current work is an <a href="projects/index.html#acs">AMR Control System</a> that takes an order through mission dispatch, execution monitoring, recovery and traceability, and connects that operational software to ROS 2 fleets, PLC equipment and FlexSim simulation.</p>
           <p>I came to robotics through web development. After a period of intensive self-study in 2021, I worked as a frontend and full-stack developer, and from 2024 I built smart-factory software: 3D and WebGL applications, logistics dashboards, and interfaces for AI vision and OCR systems, mostly with TypeScript, React, Next.js, NestJS, FastAPI and Python. I enjoy turning complex factory and robotics requirements into clear, reliable software.</p>
           <p>That engineering work is supported by research and business education: a Ph.D. in Management Information Systems from Keimyung University and an MBA from the Asian Institute of Technology.</p>
         </div>
-        <h2 id="focus">Focus areas</h2>
+
+        <h2 id="focus">Focus Areas</h2>
         <hr>
         <ul class="focus-list">
-          <li><strong>Robotics software</strong>AMR/AGV control systems, mission management and fleet operations.</li>
-          <li><strong>ROS 2 integration</strong>Fleet management with Nav2 navigation, AMCL localization and SLAM.</li>
-          <li><strong>Digital twin and simulation</strong>FlexSim and discrete-event simulation for scenario and KPI comparison.</li>
+          <li><strong>Robotics Software</strong>AMR/AGV control systems, mission management, dispatch workflows and fleet operations.</li>
+          <li><strong>ROS 2 Integration</strong>Fleet management with Nav2 navigation, AMCL localization and SLAM Toolbox.</li>
+          <li><strong>Digital Twin &amp; Simulation</strong>FlexSim and discrete-event simulation for scenario and KPI comparison.</li>
           <li><strong>Industrial AI</strong>Computer vision, OCR and pose-estimation results brought into operator workflows.</li>
-          <li><strong>Smart factory systems</strong>PLC and IoT integration, logistics and warehouse platforms.</li>
-          <li><strong>Web-based industrial software</strong>Next.js, TypeScript, FastAPI and PostgreSQL with real-time dashboards.</li>
+          <li><strong>Smart Factory Systems</strong>PLC and IoT integration, logistics and warehouse platforms.</li>
+          <li><strong>Web-Based Industrial Software</strong>Next.js, TypeScript, FastAPI and PostgreSQL with real-time dashboards.</li>
         </ul>
-        <h2 id="activities">Activities</h2>
+
+        <h2 id="activities">Activities &amp; Timeline</h2>
         <hr>
         <ul class="content-list activity-list">
           <li><span class="activity-date">Sep 2026 – Present</span><span class="activity-body">Principal Software Engineer at a robotics technology company in Seoul. Responsible for the architecture and development of an <a href="projects/index.html#acs">AMR Control System (ACS)</a> for mission management, fleet operations and robot integrations, and for connecting it to ROS 2 fleet management, PLC and IoT devices, and FlexSim digital-twin simulation.</span></li>
           <li><span class="activity-date">Aug 2026</span><span class="activity-body">Awarded a Ph.D. in Management Information Systems by Keimyung University, Daegu, South Korea.</span></li>
-          <li><span class="activity-date">May 2024 – Feb 2026</span><span class="activity-body">Senior Software Engineer at <a href="https://topcore.co.kr/">Top Core System</a>, Cheongju. Built web and AI-enabled applications for smart factories, including a 3D smart locker management platform, the HiWMS logistics platform, a WebGL production simulation and dashboards for AI vision, OCR and pose estimation. See <a href="projects/index.html#smart-factory">Projects</a>.</span></li>
-          <li><span class="activity-date">Oct 2022 – Jan 2023</span><span class="activity-body">Frontend Developer at LiberTree, Uiwang. Built React-based content applications for library information systems, including the <a href="https://ecipusa.com/">E-CIP</a> platform for US clients, and MARC-related solutions.</span></li>
+          <li><span class="activity-date">May 2024 – Feb 2026</span><span class="activity-body">Senior Software Engineer at <a href="https://topcore.co.kr/" target="_blank" rel="noopener noreferrer">Top Core System</a>, Cheongju. Built web and AI-enabled applications for smart factories, including a 3D smart locker management platform, the HiWMS logistics platform, a WebGL production simulation and dashboards for AI vision, OCR and pose estimation. See <a href="projects/index.html#smart-factory">Projects</a>.</span></li>
+          <li><span class="activity-date">Oct 2022 – Jan 2023</span><span class="activity-body">Frontend Developer at LiberTree, Uiwang. Built React-based content applications for library information systems, including the <a href="https://ecipusa.com/" target="_blank" rel="noopener noreferrer">E-CIP</a> platform for US clients, and MARC-related solutions.</span></li>
           <li><span class="activity-date">Jan – Sep 2022</span><span class="activity-body">Frontend Developer at Delmetenz, Asan: my first professional software role. Developed MERN-stack applications with React and TypeScript, implemented authentication, and deployed containerized services with Docker and NGINX.</span></li>
           <li><span class="activity-date">2021</span><span class="activity-body">Taught myself web development in Ansan, South Korea, through self-study, online tutors and training centers. The story is in <a href="blog/index.html#ansan-2021">Learning to code in Ansan</a>.</span></li>
           <li><span class="activity-date">Jun 2020 – Dec 2021</span><span class="activity-body">Freelance Web Developer for Sadaf Alo Stom, Uzbekistan. Developed dental web applications, APIs and responsive interfaces.</span></li>
@@ -193,10 +226,11 @@
     <footer class="page-footer">
       <ul>
         <li><strong>Follow:</strong></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar" target="_blank" rel="noopener noreferrer">YouTube</a></li>
       </ul>
-      <p>&copy; 2026 Muzaffar Mirzaev. Layout modelled on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</p>
+      <p>&copy; 2026 Muzaffar Mirzaev. Principal Software Engineer in Robotics &amp; Industrial AI.</p>
     </footer>
 
     <script src="assets/js/site.js"></script>

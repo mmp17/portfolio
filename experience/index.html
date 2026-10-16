@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Experience · Muzaffar Mirzaev</title>
+    <title>Experience · Muzaffar Mirzaev · Robotics &amp; Industrial AI</title>
     <meta name="description" content="Work experience, education and core technologies of Muzaffar Mirzaev, Principal Software Engineer in robotics and industrial AI.">
     <meta name="author" content="Muzaffar Mirzaev">
     <link rel="canonical" href="https://mmp17.github.io/portfolio/experience/">
@@ -15,10 +15,10 @@
     <meta property="og:image" content="https://mmp17.github.io/portfolio/images/avatar.jpg">
     <meta property="og:image:alt" content="Portrait of Muzaffar Mirzaev">
     <meta name="twitter:card" content="summary">
-    <meta name="theme-color" content="#f3f1ec">
+    <meta name="theme-color" content="#f8fafc">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -32,7 +32,7 @@
         document.documentElement.setAttribute('data-theme', theme);
         var themeMeta = document.querySelector('meta[name="theme-color"]');
         if (themeMeta) {
-          themeMeta.setAttribute('content', theme === 'dark' ? '#121411' : '#f3f1ec');
+          themeMeta.setAttribute('content', theme === 'dark' ? '#0b0f17' : '#f8fafc');
         }
       } catch (e) {}
     </script>
@@ -43,139 +43,214 @@
       <div class="masthead__inner">
         <a class="masthead__brand" href="../index.html">Muzaffar Mirzaev</a>
         <div class="masthead__end">
-        <nav class="site-nav" id="site-nav" aria-label="Main">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../experience/index.html" aria-current="page">Experience</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../resume/index.html">Resume</a></li>
-          </ul>
-        </nav>
-        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+          <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../projects/index.html">Projects</a></li>
+              <li><a href="../experience/index.html" aria-current="page">Experience</a></li>
+              <li><a href="../blog/index.html">Blog</a></li>
+              <li><a href="../resume/index.html">Resume</a></li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
         </div>
       </div>
     </header>
 
     <div class="main">
       <aside class="sidebar" aria-label="About the author">
-        <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
-        <div class="author__content">
-          <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
-          <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
-          <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
-        </div>
-        <div class="author__links">
-          <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
-          <ul class="author__urls" id="author-urls">
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar">YouTube</a></li>
-          </ul>
+        <div class="sidebar__card">
+          <div class="author__avatar-wrap">
+            <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
+          </div>
+          <div class="author__content">
+            <div class="status-pill"><span class="status-dot"></span> Available for Advisory</div>
+            <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
+            <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
+            <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
+          </div>
+          <div class="author__links">
+            <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
+            <ul class="author__urls" id="author-urls">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+          </div>
         </div>
       </aside>
 
       <main class="content" id="main">
         <h1>Experience</h1>
-        <p>Principal Software Engineer working on robotics and industrial AI. My path runs from web development through smart-factory and digital-twin software into AMR control systems.</p>
-        <h2 id="work">Work</h2>
+        <p class="lead">Career trajectory bridging software engineering, smart-factory digital twins, and autonomous mobile robot (AMR) control systems.</p>
+
+        <h2 id="work">Professional Experience</h2>
         <hr>
+
         <section class="role">
-          <h3>Principal Software Engineer · Robotics technology company</h3>
+          <h3>Principal Software Engineer · Robotics Technology Company</h3>
           <span class="role__meta">Seoul, South Korea · Sep 2026 – Present</span>
           <ul>
-            <li><strong>System ownership.</strong> Responsible for the architecture and development of an <a href="../projects/index.html#acs">AMR Control System (ACS)</a> covering mission management, fleet operations, robot integrations, alarms, recovery workflows and traceability.</li>
-            <li><strong>Architecture.</strong> Build the ACS as a Next.js and TypeScript dashboard on a FastAPI backend with PostgreSQL, WebSocket communication for real-time state, and containerized services.</li>
-            <li><strong>Robotics integration.</strong> Integrate ROS 2 fleet management with map services, SLAM, AMCL localization, Nav2 navigation and PLC-controlled equipment workflows.</li>
-            <li><strong>Industrial automation.</strong> Connect PLC and IoT devices through industrial communication protocols to synchronize robot status, equipment signals, safety interlocks and operational events.</li>
-            <li><strong>Simulation and validation.</strong> Integrate operational workflows with FlexSim-based digital-twin simulation to compare scenarios and KPIs such as throughput, utilization, waiting time and fleet sizing.</li>
-            <li><strong>Wider scope.</strong> Support smart-factory initiatives involving robotics, AI vision projects, warehouse automation and industrial data systems.</li>
+            <li><strong>System Ownership:</strong> Architect and lead development of an enterprise <a href="../projects/index.html#acs">AMR Control System (ACS)</a> covering high-throughput mission dispatch, fleet monitoring, dynamic map/station management, safety alarms, and automated recovery.</li>
+            <li><strong>Full-Stack Architecture:</strong> Engineered reactive web UI in Next.js and TypeScript on a containerized FastAPI backend with PostgreSQL, using real-time bi-directional WebSocket telemetry for live robot status tracking.</li>
+            <li><strong>Robotics Fleet Integration:</strong> Direct ROS 2 fleet manager and robot adapter integration with Nav2 navigation stacks, AMCL probabilistic localization, and SLAM Toolbox.</li>
+            <li><strong>Industrial Automation &amp; Safety:</strong> Interfaced industrial PLCs and IoT equipment over industrial protocols to synchronize robot movement with automated station gates, lifters, and safety interlocks.</li>
+            <li><strong>Digital-Twin Validation:</strong> Integrated operational mission data with FlexSim discrete-event digital twins to validate multi-robot traffic flow, queue limits, and station throughput.</li>
           </ul>
+          <div class="tech-pills">
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">ROS 2</span>
+            <span class="tech-pill">Nav2</span>
+            <span class="tech-pill">FlexSim</span>
+            <span class="tech-pill">PLC / IoT</span>
+            <span class="tech-pill">Docker</span>
+          </div>
         </section>
+
         <section class="role">
-          <h3>Senior Software Engineer · <a href="https://topcore.co.kr/">Top Core System</a></h3>
+          <h3>Senior Software Engineer · <a href="https://topcore.co.kr/" target="_blank" rel="noopener noreferrer">Top Core System</a></h3>
           <span class="role__meta">Cheongju, South Korea · May 2024 – Feb 2026</span>
           <ul>
-            <li>Developed web and AI-enabled applications for smart-factory and enterprise use cases, including a 3D smart locker platform, the HiWMS logistics platform and a WebGL production simulation. See <a href="../projects/index.html#smart-factory">Projects</a>.</li>
-            <li>Built responsive dashboards and real-time monitoring interfaces with React, Next.js, TypeScript, APIs and WebSocket-based communication.</li>
-            <li>Worked on AI vision, OCR, pose-estimation and operational-data workflows using Python and modern web technologies.</li>
+            <li>Engineered enterprise smart-factory platforms including the HiWMS warehouse logistics system, a 3D smart locker management platform, and WebGL manufacturing simulations. See <a href="../projects/index.html#smart-factory">Projects</a>.</li>
+            <li>Built high-performance dashboards with React, Next.js, and TypeScript, streaming industrial sensor telemetry over WebSocket and Socket.IO.</li>
+            <li>Developed pipelines bringing AI computer vision inference, drawing OCR review workflows, and worker pose estimation into operator interfaces using Python and FastAPI.</li>
           </ul>
+          <div class="tech-pills">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Next.js</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">WebGL / Three.js</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Computer Vision</span>
+            <span class="tech-pill">WebSocket</span>
+          </div>
         </section>
+
         <section class="role">
           <h3>Frontend Developer · LiberTree</h3>
           <span class="role__meta">Uiwang, South Korea · Oct 2022 – Jan 2023</span>
           <ul>
-            <li>Built React-based content applications for library information systems and customized products for US clients.</li>
-            <li>Contributed to real-time MARC-related solutions and responsive web interfaces.</li>
+            <li>Built React-based digital cataloging solutions for US library information clients, including the <a href="https://ecipusa.com/" target="_blank" rel="noopener noreferrer">E-CIP</a> platform.</li>
+            <li>Developed real-time MARC-related bibliographic viewers, search filtering, and administrative management tools.</li>
           </ul>
+          <div class="tech-pills">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Library Systems</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
         </section>
+
         <section class="role">
           <h3>Frontend Developer · Delmetenz</h3>
           <span class="role__meta">Asan, South Korea · Jan 2022 – Sep 2022</span>
           <ul>
-            <li>Built MERN-stack applications using React and TypeScript.</li>
-            <li>Implemented authentication with JWT, Express Session and BcryptJS.</li>
-            <li>Deployed containerized services with Docker and NGINX and configured DNS, firewalls and monitoring.</li>
+            <li>Developed full-stack MERN (MongoDB, Express, React, Node.js) web applications with TypeScript.</li>
+            <li>Implemented secure JWT authentication, session storage, and role-based access control.</li>
+            <li>Configured Docker container deployment, NGINX reverse proxies, SSL certificates, and DNS settings.</li>
           </ul>
+          <div class="tech-pills">
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">TypeScript</span>
+            <span class="tech-pill">Node.js</span>
+            <span class="tech-pill">MongoDB</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">NGINX</span>
+          </div>
         </section>
+
         <section class="role">
           <h3>Freelance Web Developer · Sadaf Alo Stom</h3>
           <span class="role__meta">Uzbekistan · Jun 2020 – Dec 2021</span>
           <ul>
-            <li>Developed and maintained dental web applications, APIs and responsive user interfaces.</li>
+            <li>Built responsive healthcare applications, appointment management workflows, and customer-facing web services.</li>
           </ul>
+          <div class="tech-pills">
+            <span class="tech-pill">HTML / CSS</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
         </section>
-        <h2 id="education">Education</h2>
+
+        <h2 id="education">Education &amp; Research</h2>
         <hr>
         <ul class="content-list">
           <li>
             <strong>Ph.D. in Management Information Systems</strong>
-            <span class="item-desc">Keimyung University, Daegu, South Korea. Research focus on web crawling and data analytics.</span>
-            <span class="item-meta"><span class="role__meta">Awarded Aug 2026</span></span>
+            <span class="item-desc">Keimyung University, Daegu, South Korea. Advanced research focusing on automated web crawling architectures, unstructured data extraction, and machine analytics.</span>
+            <span class="item-meta"><span class="activity-date">Awarded Aug 2026</span></span>
           </li>
           <li>
-            <strong>Master of Business Administration</strong>
-            <span class="item-desc">Asian Institute of Technology (AIT), Thailand. ADB–Japan Scholarship.</span>
-            <span class="item-meta"><span class="role__meta">2007 – 2009</span></span>
+            <strong>Master of Business Administration (MBA)</strong>
+            <span class="item-desc">Asian Institute of Technology (AIT), Thailand. Awarded the prestigious ADB–Japan Scholarship for excellence in international technology management.</span>
+            <span class="item-meta"><span class="activity-date">2007 – 2009</span></span>
           </li>
         </ul>
+
         <h2 id="technologies">Core Technologies</h2>
         <hr>
         <div class="table-wrap">
           <table class="table">
             <tbody>
-              <tr><th scope="row">Robotics</th><td>ROS 2, Nav2, SLAM Toolbox, AMCL, Gazebo, AMR fleet workflows</td></tr>
-              <tr><th scope="row">Simulation &amp; Digital Twin</th><td>FlexSim, discrete-event simulation, KPI analysis</td></tr>
-              <tr><th scope="row">Industrial AI</th><td>Python, computer vision, OCR, YOLO</td></tr>
-              <tr><th scope="row">Frontend</th><td>TypeScript, JavaScript, React, Next.js, Redux, Tailwind CSS, Material UI, Three.js</td></tr>
-              <tr><th scope="row">Backend &amp; APIs</th><td>Node.js, NestJS, Express, FastAPI, REST APIs, WebSocket, Socket.IO</td></tr>
-              <tr><th scope="row">Data</th><td>PostgreSQL, MySQL, MongoDB, Redis, SQLite</td></tr>
-              <tr><th scope="row">DevOps</th><td>Docker, NGINX, Caddy, GitHub Actions, Linux, PM2</td></tr>
-              <tr><th scope="row">Quality</th><td>pytest, Playwright, ESLint, TypeScript, Node.js test runner</td></tr>
+              <tr>
+                <th scope="row">Robotics &amp; Fleet</th>
+                <td>ROS 2, Nav2, SLAM Toolbox, AMCL Localization, Gazebo, Multi-AMR Fleet Management</td>
+              </tr>
+              <tr>
+                <th scope="row">Simulation &amp; Digital Twin</th>
+                <td>FlexSim, Discrete-Event Simulation, Scenario &amp; KPI Optimization, WebGL 3D</td>
+              </tr>
+              <tr>
+                <th scope="row">Industrial AI &amp; Vision</th>
+                <td>Python, Computer Vision (OpenCV, YOLO), OCR Text Detection, Pose Estimation</td>
+              </tr>
+              <tr>
+                <th scope="row">Frontend Architecture</th>
+                <td>TypeScript, React, Next.js, Redux, Three.js, Tailwind CSS, Modern CSS, HTML5</td>
+              </tr>
+              <tr>
+                <th scope="row">Backend &amp; Industrial IoT</th>
+                <td>FastAPI, Node.js, NestJS, Express, WebSocket, Socket.IO, PLC Communication</td>
+              </tr>
+              <tr>
+                <th scope="row">Databases &amp; Storage</th>
+                <td>PostgreSQL, MongoDB, MySQL, Redis, SQLite</td>
+              </tr>
+              <tr>
+                <th scope="row">DevOps &amp; Infrastructure</th>
+                <td>Docker, NGINX, Linux / Ubuntu, GitHub Actions (CI/CD), PM2</td>
+              </tr>
             </tbody>
           </table>
         </div>
+
         <h2 id="languages">Languages</h2>
         <hr>
-        <ul class="content-list">
-          <li>Uzbek: native</li>
-          <li>English: professional working proficiency</li>
-          <li>Korean: intermediate</li>
-          <li>Russian: intermediate</li>
-        </ul>
+        <div class="tech-pills" style="margin-top: 0.5rem;">
+          <span class="tech-pill" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">Uzbek: Native</span>
+          <span class="tech-pill" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">English: Professional Working Proficiency</span>
+          <span class="tech-pill" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">Korean: Intermediate</span>
+          <span class="tech-pill" style="font-size: 0.85rem; padding: 0.35rem 0.75rem;">Russian: Intermediate</span>
+        </div>
       </main>
     </div>
 
     <footer class="page-footer">
       <ul>
         <li><strong>Follow:</strong></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar" target="_blank" rel="noopener noreferrer">YouTube</a></li>
       </ul>
-      <p>&copy; 2026 Muzaffar Mirzaev. Layout modelled on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</p>
+      <p>&copy; 2026 Muzaffar Mirzaev. Principal Software Engineer in Robotics &amp; Industrial AI.</p>
     </footer>
 
     <script src="../assets/js/site.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects · Muzaffar Mirzaev</title>
+    <title>Projects · Muzaffar Mirzaev · Robotics &amp; Industrial AI</title>
     <meta name="description" content="Projects by Muzaffar Mirzaev: an AMR control system with ROS 2 and FlexSim digital-twin integration, smart-factory and AI applications, and web applications.">
     <meta name="author" content="Muzaffar Mirzaev">
     <link rel="canonical" href="https://mmp17.github.io/portfolio/projects/">
@@ -15,10 +15,10 @@
     <meta property="og:image" content="https://mmp17.github.io/portfolio/images/avatar.jpg">
     <meta property="og:image:alt" content="Portrait of Muzaffar Mirzaev">
     <meta name="twitter:card" content="summary">
-    <meta name="theme-color" content="#f3f1ec">
+    <meta name="theme-color" content="#f8fafc">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -32,7 +32,7 @@
         document.documentElement.setAttribute('data-theme', theme);
         var themeMeta = document.querySelector('meta[name="theme-color"]');
         if (themeMeta) {
-          themeMeta.setAttribute('content', theme === 'dark' ? '#121411' : '#f3f1ec');
+          themeMeta.setAttribute('content', theme === 'dark' ? '#0b0f17' : '#f8fafc');
         }
       } catch (e) {}
     </script>
@@ -43,221 +43,297 @@
       <div class="masthead__inner">
         <a class="masthead__brand" href="../index.html">Muzaffar Mirzaev</a>
         <div class="masthead__end">
-        <nav class="site-nav" id="site-nav" aria-label="Main">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../projects/index.html" aria-current="page">Projects</a></li>
-            <li><a href="../experience/index.html">Experience</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../resume/index.html">Resume</a></li>
-          </ul>
-        </nav>
-        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+          <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../projects/index.html" aria-current="page">Projects</a></li>
+              <li><a href="../experience/index.html">Experience</a></li>
+              <li><a href="../blog/index.html">Blog</a></li>
+              <li><a href="../resume/index.html">Resume</a></li>
+            </ul>
+          </nav>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
         </div>
       </div>
     </header>
 
     <div class="main">
       <aside class="sidebar" aria-label="About the author">
-        <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
-        <div class="author__content">
-          <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
-          <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
-          <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
-        </div>
-        <div class="author__links">
-          <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
-          <ul class="author__urls" id="author-urls">
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
-            <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar">YouTube</a></li>
-          </ul>
+        <div class="sidebar__card">
+          <div class="author__avatar-wrap">
+            <img class="author__avatar" src="../images/avatar.jpg" alt="Muzaffar Mirzaev" width="460" height="460">
+          </div>
+          <div class="author__content">
+            <div class="status-pill"><span class="status-dot"></span> Available for Advisory</div>
+            <p class="author__name">Muzaffar Mirzaev, Ph.D.</p>
+            <p class="author__title">Principal Software Engineer · Robotics &amp; Industrial AI</p>
+            <p class="author__bio">Software for autonomous mobile robots, digital twins and smart factories.</p>
+          </div>
+          <div class="author__links">
+            <button class="author__follow" type="button" aria-expanded="false" aria-controls="author-urls">Follow</button>
+            <ul class="author__urls" id="author-urls">
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Seoul, South Korea</li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="js-email" data-user="mirzaevmuzaffar" data-domain="gmail.com">Email</span></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+              <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            </ul>
+          </div>
         </div>
       </aside>
 
       <main class="content" id="main">
         <h1>Projects</h1>
-        <p>Recent work first: robotics and digital-twin software, then smart-factory and AI applications, followed by web applications and the earlier projects I learned on.</p>
-        <nav class="page-nav" aria-label="Project groups">
-          <a href="#robotics">Robotics &amp; Digital Twin</a>
-          <a href="#smart-factory">Smart Factory &amp; AI</a>
-          <a href="#web">Web Applications</a>
-          <a href="#earlier">Earlier Projects</a>
-        </nav>
+        <p class="lead">Engineered systems across autonomous robotics, digital-twin simulation, smart-factory automation, and enterprise web platforms.</p>
+        
+        <!-- Interactive Category Filters -->
+        <div class="project-filter-nav" aria-label="Filter projects by domain">
+          <button class="filter-btn is-active" type="button" data-filter="all">All Projects</button>
+          <button class="filter-btn" type="button" data-filter="robotics">Robotics &amp; Digital Twin</button>
+          <button class="filter-btn" type="button" data-filter="smart-factory">Smart Factory &amp; AI</button>
+          <button class="filter-btn" type="button" data-filter="web">Web Platforms</button>
+          <button class="filter-btn" type="button" data-filter="earlier">Earlier Projects</button>
+        </div>
 
-        <h2 id="robotics">Robotics &amp; Digital Twin</h2>
-        <hr>
-        <!-- Flagship project. Each row of the status table carries one status label:
-             <span class="status">In development</span>
-             <span class="status status--implemented">Implemented</span>
-             <span class="status status--prototype">Prototype</span>
-             <span class="status status--planned">Planned</span> -->
-        <article class="project project--flagship" id="acs">
-          <h3>AMR Control System (ACS)</h3>
-          <span class="role__meta">Principal Software Engineer · Robotics technology company, Seoul · Sep 2026 – present</span>
-          <p class="project__summary">A control system for autonomous mobile robot fleets. It turns factory orders into robot missions, dispatches and monitors them, supports recovery when something fails, and keeps a record of what happened.</p>
-          <dl class="case">
-            <dt>Problem</dt>
-            <dd>An AMR fleet needs a layer between factory operations and the robots. Orders have to become missions, missions have to be dispatched and followed through execution, and operators need to see what is happening and recover when a robot, a station or a piece of equipment does not behave as planned. That layer should not be tied to a single robot vendor.</dd>
-            <dt>My contribution</dt>
-            <dd>Responsible for the architecture and development of the system across the operations dashboard, the backend services, and the integration layer toward robots, factory equipment and simulation.</dd>
-            <dt>Architecture</dt>
-            <dd>
-              <ul>
-                <li><strong>Operations application.</strong> A Next.js and TypeScript dashboard on a FastAPI backend with PostgreSQL, running as containerized services. It covers mission management, fleet operations, map and station management, and alarms and events.</li>
-                <li><strong>Mission lifecycle.</strong> A mission is tracked from order and dispatch through execution to completion or failure, with recovery workflows for the failure cases and an audit trail for traceability.</li>
-                <li><strong>Real-time state.</strong> Robot and mission status reach the dashboard over WebSocket.</li>
-                <li><strong>Robot integration.</strong> A fleet-manager and robot-adapter layer separates the control logic from the robot side. Robots are integrated through ROS 2, with Nav2 navigation, AMCL localization and SLAM mapping.</li>
-                <li><strong>Equipment integration.</strong> PLC and IoT devices are connected over industrial communication protocols to synchronize robot status, equipment signals, safety interlocks and operational events.</li>
-                <li><strong>Simulation.</strong> Operational workflows are connected to a FlexSim digital-twin model.</li>
-              </ul>
-            </dd>
-            <dt>Validation</dt>
-            <dd>The FlexSim integration is used to compare scenarios on KPIs such as throughput, utilization, waiting time and fleet sizing. The system is under active development, so no production results are reported here.</dd>
-          </dl>
-          <!-- Status table, hidden for now. Remove this comment line and the closing one to show it.
-          <div class="table-wrap">
-            <table class="table table--status">
-              <caption>Current status by area</caption>
-              <thead>
-                <tr><th scope="col">Area</th><th scope="col">Scope</th><th scope="col">Status</th></tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">Operations dashboard and backend</th><td>Missions, fleet, maps and stations, alarms and events, recovery, audit</td><td><span class="status">In development</span></td></tr>
-                <tr><th scope="row">ROS 2 fleet integration</th><td>Fleet manager and robot adapters, Nav2, AMCL, SLAM</td><td><span class="status">In development</span></td></tr>
-                <tr><th scope="row">PLC and IoT integration</th><td>Equipment signals, safety interlocks, operational events</td><td><span class="status">In development</span></td></tr>
-                <tr><th scope="row">FlexSim digital twin</th><td>Scenario and KPI comparison</td><td><span class="status">In development</span></td></tr>
-              </tbody>
-            </table>
-          </div>
-          -->
-          <p class="project__note">Customer, site and equipment details are left out for confidentiality.</p>
-          <span class="item-meta">Next.js · TypeScript · FastAPI · PostgreSQL · WebSocket · Docker · ROS 2 · Nav2 · AMCL · SLAM Toolbox · PLC / IoT · FlexSim</span>
-        </article>
-        <article class="project">
-          <h3><a href="https://www.youtube.com/watch?v=2NpCmEO0aRI">Production Simulation: Digital-Twin Simulation and Remote Control</a></h3>
-          <span class="role__meta">Top Core System · Frontend · demo video</span>
-          <p class="project__summary">WebGL production simulation with a 3D simulation view, simulation input forms, report pages, an admin area for image upload and configuration, and a dark mode.</p>
-        </article>
-        <article class="project">
-          <h3>AI Robot for Smart Factory: Web GUI</h3>
-          <span class="role__meta">Top Core System · Frontend / full-stack</span>
-          <p class="project__summary">Web interface for an AI robot system, bringing robotics and AI outputs into a usable dashboard with backend API integration and real-time updates over WebSocket and Socket.IO.</p>
-        </article>
+        <!-- Section 1: Robotics & Digital Twin -->
+        <section class="project-section" data-category="robotics">
+          <h2 id="robotics">Robotics &amp; Digital Twin</h2>
+          <hr>
 
-        <h2 id="smart-factory">Smart Factory &amp; AI</h2>
-        <hr>
-        <p>Built as Senior Software Engineer at <a href="https://topcore.co.kr/">Top Core System</a> between May 2024 and February 2026.</p>
-        <article class="project" id="hiwms">
-          <h3><a href="https://www.youtube.com/watch?v=YAZbQ9Yz190">HiWMS: AI-Powered Smart Logistics Management</a></h3>
-          <span class="role__meta">Frontend / full-stack · demo video · <a href="https://github.com/mmp17/hi-wms-dashboard">dashboard repository</a></span>
-          <dl class="case">
-            <dt>Product</dt>
-            <dd>Logistics platform for warehouse and factory operations with inbound, outbound and inventory workflows, real-time monitoring dashboards and an admin portal.</dd>
-            <dt>My contribution</dt>
-            <dd>Built the responsive dashboards and admin UI in React and Next.js, and integrated backend APIs and real-time updates over WebSocket and Socket.IO.</dd>
-          </dl>
-        </article>
-        <article class="project">
-          <h3><a href="https://topcore.co.kr/closet">Hi Closet: 3D-Based Smart Locker Management Platform</a></h3>
-          <span class="role__meta">Frontend · <a href="https://www.youtube.com/watch?v=r7cs8Pg3i_U">demo video</a></span>
-          <p class="project__summary">Web-based smart locker management system. Covers locker allocation for employees and partners, real-time 3D visualization and floor management, quick search by employee ID or department, alarms for unassigned employees, and admin tools for status and history tracking.</p>
-        </article>
-        <article class="project">
-          <h3>3D-Based Operation and Maintenance Training Platform</h3>
-          <span class="role__meta">Frontend / system integration</span>
-          <dl class="case">
-            <dt>Product</dt>
-            <dd>Computer-based training platform that combines high-fidelity 3D models with procedural simulation: part exploration, step-by-step maintenance workflows, remote training and assessment.</dd>
-            <dt>My contribution</dt>
-            <dd>Developed the frontend for the 3D interaction workflows, designed the component-tree and procedure navigation, integrated backend APIs and simulation data, and implemented role-based access and session management.</dd>
-          </dl>
-        </article>
-        <article class="project">
-          <h3>AI Vision, OCR and Worker-Safety Dashboards</h3>
-          <span class="role__meta">React · Next.js · TypeScript · Python</span>
-          <p class="project__summary">Frontend and full-stack work across several AI-driven platforms: vision inspection with real-time monitoring, automatic document and drawing recognition with OCR review workflows, and worker behavior monitoring with safety event detection, alert dashboards and incident reporting. AI inference results are integrated through REST APIs and WebSocket.</p>
-        </article>
+          <article class="project project--flagship" id="acs">
+            <span class="flagship-badge">&#9733; Flagship System</span>
+            <h3>AMR Control System (ACS)</h3>
+            <span class="role__meta">Principal Software Engineer · Robotics Technology Company, Seoul · Sep 2026 – Present</span>
+            
+            <div class="pipeline-flow">
+              <span class="pipeline-step">1. Order Ingestion</span>
+              <span class="pipeline-arrow">&rarr;</span>
+              <span class="pipeline-step">2. ACS Mission Dispatch</span>
+              <span class="pipeline-arrow">&rarr;</span>
+              <span class="pipeline-step">3. ROS 2 / Nav2 Fleet</span>
+              <span class="pipeline-arrow">&rarr;</span>
+              <span class="pipeline-step">4. PLC Safety Interlocks</span>
+              <span class="pipeline-arrow">&rarr;</span>
+              <span class="pipeline-step">5. FlexSim Digital Twin</span>
+            </div>
 
-        <h2 id="web">Web Applications</h2>
-        <hr>
-        <ul class="content-list">
-          <li>
-            <strong><a href="https://ecipusa.com/">E-CIP: Library Content Application</a></strong>
-            <span class="item-desc">React-based Electronic Cataloging in Publication application for library information services, built at LiberTree for US clients. It gives access to domestic and foreign bibliographic information with book images, tables of contents and author biographies. I developed list and grid views for titles, a side-view mode for detailed information, and an admin panel for librarians.</span>
-            <span class="item-meta">React · responsive · two-person team</span>
-          </li>
-          <li>
-            <strong>JS Shop: E-commerce MERN Platform</strong>
-            <span class="item-desc">Full-stack marketplace for electronics sellers in Korea, built from the ground up with an MVC architecture. Includes product listing with sorting, search and comparison, reviews, blogs, live chat, member pages, a cart, five theme colors, and a seller and admin panel. Deployed on Ubuntu with Docker, NGINX and PM2.</span>
-            <span class="item-meta">React · TypeScript · Redux · Node.js · Express · MongoDB · Socket.IO</span>
-          </li>
-          <li>
-            <strong><a href="https://topcore.co.kr/">Top Core System Corporate Website</a></strong>
-            <span class="item-desc">Company website for Top Core System.</span>
-            <span class="item-meta">Frontend</span>
-          </li>
-          <li>
-            <strong><a href="https://www.nx3games.com/">NX3 Games Company Website</a></strong>
-            <span class="item-desc">Fully responsive corporate website built with GSAP, ScrollMagic, Swiper, AOS and Slick. Team project with two frontend developers and one backend developer.</span>
-            <span class="item-meta">JavaScript · GSAP</span>
-          </li>
-          <li>
-            <strong><a href="https://youth6-0.vercel.app">Doran Nuri: Community Sharing Web App</a></strong>
-            <span class="item-desc">Platform where young people in Cheonan can communicate, share suggestions and shape their local community. Team project with two frontend developers and one backend developer.</span>
-            <span class="item-meta">Vue · Nuxt · <a href="https://github.com/mmp17/youth6.0">repository</a></span>
-          </li>
-        </ul>
+            <p class="project__summary">A vendor-agnostic control system for autonomous mobile robot (AMR/AGV) fleets. It orchestrates high-throughput factory orders into executable multi-robot missions, tracks real-time spatial execution, handles exception recovery, and maintains audit traceability.</p>
+            
+            <dl class="case">
+              <dt>Challenge</dt>
+              <dd>Operating AMR fleets requires an intelligent middle layer between MES/WMS factory operations and autonomous robots. Missions must be scheduled without deadlock, dispatched over ROS 2 networks, synchronized with automated equipment (PLCs, doors, lifters), and provide operators with instant visibility and failover recovery.</dd>
+              
+              <dt>Architecture &amp; Contribution</dt>
+              <dd>
+                <ul>
+                  <li><strong>Operations Dashboard &amp; Backend:</strong> Next.js &amp; TypeScript client on a containerized FastAPI backend with PostgreSQL, providing mission control, station mapping, live telemetry over WebSocket, and alarm management.</li>
+                  <li><strong>Mission Lifecycle Engine:</strong> End-to-end tracking from order intake through dispatch, execution, exception recovery, and immutable audit logs.</li>
+                  <li><strong>Fleet &amp; Robot Adapters:</strong> Modular adapter architecture integrating ROS 2 fleets, Nav2 navigation stacks, AMCL localization, and SLAM Toolbox.</li>
+                  <li><strong>Industrial Automation:</strong> Interfacing with PLC and IoT equipment via industrial communication protocols for door controls, station interlocks, and safety signals.</li>
+                  <li><strong>Digital-Twin Validation:</strong> Continuous workflow synchronization with FlexSim simulation models to benchmark KPIs: throughput, queue times, and fleet sizing.</li>
+                </ul>
+              </dd>
 
-        <h2 id="earlier">Earlier Projects</h2>
-        <hr>
-        <p>Smaller projects from my first years of web development, kept as a record of where I started.</p>
-        <ul class="content-list content-list--compact">
-          <li>
-            <strong><a href="https://barfe.netlify.app/index.html">Barfe: Mobile-Style Web App for Elderly People</a></strong>
-            <span class="item-desc">Web application UI for elderly and disabled users with Transportation, Facilities and Travel Course sections. Solo project.</span>
-            <span class="item-meta">HTML · CSS · vanilla JavaScript</span>
-          </li>
-          <li>
-            <strong><a href="https://github.com/mmp17/papayReact">Papay: Food Delivery Project</a></strong>
-            <span class="item-desc">Food delivery application with a React and TypeScript frontend and a Node.js backend.</span>
-            <span class="item-meta"><a href="https://github.com/mmp17/papayReact">frontend</a> · <a href="https://github.com/mmp17/papayProject">backend</a></span>
-          </li>
-          <li>
-            <strong><a href="https://mfr-react-socialmedia.netlify.app/">React Social Media App</a></strong>
-            <span class="item-desc">Social media application built with React.</span>
-            <span class="item-meta"><a href="https://github.com/mmp17/react-socialmediaapp">repository</a></span>
-          </li>
-          <li>
-            <strong><a href="https://mfr-pixabay.netlify.app/">Pixabay Image Finder</a></strong>
-            <span class="item-desc">Image search application built with React on the Pixabay API.</span>
-            <span class="item-meta"><a href="https://github.com/mmp17/react-pixabay-imagefinder">repository</a></span>
-          </li>
-          <li>
-            <strong><a href="https://github.com/mmp17/mfr-cars-mernapp">MFR Cars: MERN App</a></strong>
-            <span class="item-desc">Car application built on the MERN stack with login.</span>
-            <span class="item-meta">MongoDB · Express · React · Node.js</span>
-          </li>
-          <li>
-            <strong><a href="https://mmp17.github.io/usefulwebdevlink/">Useful Web Dev Links</a></strong>
-            <span class="item-desc">Curated collection of web development resources.</span>
-            <span class="item-meta"><a href="https://github.com/mmp17/usefulwebdevlink">repository</a></span>
-          </li>
-        </ul>
-        <p>More on <a href="https://github.com/mmp17">GitHub</a>, and in the full <a href="https://drive.google.com/file/d/1A6H_Tr2nthmnRgy0pdaUHlXgEo-RRkUC/view">portfolio (PDF)</a> with screenshots.</p>
+              <dt>Tech Stack</dt>
+              <dd>
+                <div class="tech-pills">
+                  <span class="tech-pill">Next.js</span>
+                  <span class="tech-pill">TypeScript</span>
+                  <span class="tech-pill">FastAPI</span>
+                  <span class="tech-pill">PostgreSQL</span>
+                  <span class="tech-pill">WebSocket</span>
+                  <span class="tech-pill">Docker</span>
+                  <span class="tech-pill">ROS 2</span>
+                  <span class="tech-pill">Nav2</span>
+                  <span class="tech-pill">AMCL</span>
+                  <span class="tech-pill">SLAM Toolbox</span>
+                  <span class="tech-pill">PLC / IoT</span>
+                  <span class="tech-pill">FlexSim</span>
+                </div>
+              </dd>
+            </dl>
+            <p class="project__note">Customer, site, and proprietary equipment specifications are omitted for confidentiality.</p>
+          </article>
+
+          <article class="project">
+            <h3>Production Simulation: Digital-Twin Simulation &amp; Remote Control</h3>
+            <span class="role__meta">Top Core System · Frontend &amp; WebGL · <a href="https://www.youtube.com/watch?v=2NpCmEO0aRI" target="_blank" rel="noopener noreferrer">Watch Demo Video &rarr;</a></span>
+            <p class="project__summary">WebGL-based production simulation featuring a real-time 3D simulation view, dynamic parameter forms, production analytics reports, configuration admin panels, and dark mode.</p>
+            <div class="tech-pills">
+              <span class="tech-pill">WebGL</span>
+              <span class="tech-pill">Three.js</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">Digital Twin</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>AI Robot for Smart Factory: Web GUI</h3>
+            <span class="role__meta">Top Core System · Frontend / Full-Stack</span>
+            <p class="project__summary">Operational web interface for an autonomous AI robot system. Translates robot sensor outputs, mission telemetry, and vision inference results into an intuitive real-time dashboard over WebSocket and Socket.IO.</p>
+            <div class="tech-pills">
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">WebSocket</span>
+              <span class="tech-pill">Socket.IO</span>
+              <span class="tech-pill">AI Vision GUI</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- Section 2: Smart Factory & AI -->
+        <section class="project-section" data-category="smart-factory">
+          <h2 id="smart-factory">Smart Factory &amp; AI</h2>
+          <hr>
+          <p class="note">Developed during tenure as Senior Software Engineer at <a href="https://topcore.co.kr/" target="_blank" rel="noopener noreferrer">Top Core System</a> (May 2024 – Feb 2026).</p>
+
+          <article class="project" id="hiwms">
+            <h3>HiWMS: AI-Powered Smart Logistics Management Platform</h3>
+            <span class="role__meta">Frontend / Full-Stack · <a href="https://www.youtube.com/watch?v=YAZbQ9Yz190" target="_blank" rel="noopener noreferrer">Watch Demo Video &rarr;</a> · <a href="https://github.com/mmp17/hi-wms-dashboard" target="_blank" rel="noopener noreferrer">Dashboard Repo &rarr;</a></span>
+            <dl class="case">
+              <dt>Product</dt>
+              <dd>Enterprise warehouse logistics management system streamlining inbound receipt, inventory tracking, outbound fulfillment, and live analytics.</dd>
+              <dt>Contribution</dt>
+              <dd>Engineered high-responsiveness dashboards and admin management UI with Next.js, React, and TypeScript; connected live streaming metrics and state updates using WebSocket.</dd>
+            </dl>
+            <div class="tech-pills">
+              <span class="tech-pill">Next.js</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">WebSocket</span>
+              <span class="tech-pill">WMS</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Hi Closet: 3D-Based Smart Locker Management Platform</h3>
+            <span class="role__meta">Frontend · <a href="https://topcore.co.kr/closet" target="_blank" rel="noopener noreferrer">Product Page &rarr;</a> · <a href="https://www.youtube.com/watch?v=r7cs8Pg3i_U" target="_blank" rel="noopener noreferrer">Watch Demo Video &rarr;</a></span>
+            <p class="project__summary">Interactive smart locker allocation platform featuring real-time 3D floor map visualization, employee and partner credential verification, instant status filtering, and comprehensive history tracking.</p>
+            <div class="tech-pills">
+              <span class="tech-pill">3D Floorplan</span>
+              <span class="tech-pill">React</span>
+              <span class="tech-pill">TypeScript</span>
+              <span class="tech-pill">Smart Factory</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>3D-Based Operation and Maintenance Training Platform</h3>
+            <span class="role__meta">Frontend &amp; Systems Integration</span>
+            <dl class="case">
+              <dt>Product</dt>
+              <dd>Interactive training software combining high-fidelity 3D CAD/mesh assets with step-by-step procedural simulation for equipment assembly, maintenance, and safety certification.</dd>
+              <dt>Contribution</dt>
+              <dd>Developed 3D procedural workflows, component interaction trees, inspection views, session analytics, and role-based permissions.</dd>
+            </dl>
+            <div class="tech-pills">
+              <span class="tech-pill">3D Simulation</span>
+              <span class="tech-pill">Procedural Guidance</span>
+              <span class="tech-pill">React</span>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>AI Vision, OCR and Worker-Safety Dashboards</h3>
+            <span class="role__meta">React · Next.js · TypeScript · Python</span>
+            <p class="project__summary">Engineered interfaces for AI computer vision models: defect inspection pipelines, optical character recognition (OCR) for technical drawings, and worker pose estimation for factory safety violation alerts.</p>
+            <div class="tech-pills">
+              <span class="tech-pill">Computer Vision</span>
+              <span class="tech-pill">OCR</span>
+              <span class="tech-pill">Pose Estimation</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">FastAPI</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- Section 3: Web Applications -->
+        <section class="project-section" data-category="web">
+          <h2 id="web">Web Applications</h2>
+          <hr>
+          <ul class="content-list">
+            <li>
+              <strong><a href="https://ecipusa.com/" target="_blank" rel="noopener noreferrer">E-CIP: Library Content Application &rarr;</a></strong>
+              <span class="item-desc">React-based Electronic Cataloging in Publication platform for US library services. Provides domestic and foreign bibliographic exploration, table of contents indexing, and librarian curation tools.</span>
+              <span class="item-meta">React · Responsive Web · Two-person team</span>
+            </li>
+            <li>
+              <strong>JS Shop: E-commerce MERN Platform</strong>
+              <span class="item-desc">Full-featured electronics marketplace built with MVC architecture: live sorting, multi-attribute search, customer reviews, real-time customer support chat, seller admin portal, and Docker/NGINX deployment.</span>
+              <span class="item-meta">React · TypeScript · Redux · Node.js · Express · MongoDB · Socket.IO</span>
+            </li>
+            <li>
+              <strong><a href="https://topcore.co.kr/" target="_blank" rel="noopener noreferrer">Top Core System Corporate Website &rarr;</a></strong>
+              <span class="item-desc">Corporate web platform presenting smart factory solutions, AI vision products, and client case studies.</span>
+              <span class="item-meta">Frontend · Modern CSS</span>
+            </li>
+            <li>
+              <strong><a href="https://www.nx3games.com/" target="_blank" rel="noopener noreferrer">NX3 Games Corporate Website &rarr;</a></strong>
+              <span class="item-desc">High-impact interactive gaming studio website with smooth GSAP animations, ScrollMagic transitions, and dynamic carousel showcases.</span>
+              <span class="item-meta">JavaScript · GSAP · ScrollMagic</span>
+            </li>
+            <li>
+              <strong><a href="https://youth6-0.vercel.app" target="_blank" rel="noopener noreferrer">Doran Nuri: Community Sharing Platform &rarr;</a></strong>
+              <span class="item-desc">Civic engagement platform enabling Cheonan residents to share suggestions and collaborate on municipal ideas.</span>
+              <span class="item-meta">Vue · Nuxt · <a href="https://github.com/mmp17/youth6.0" target="_blank" rel="noopener noreferrer">Repository</a></span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 4: Earlier Projects -->
+        <section class="project-section" data-category="earlier">
+          <h2 id="earlier">Earlier Projects</h2>
+          <hr>
+          <p class="note">Foundational projects built during self-study and early software development.</p>
+          <ul class="content-list content-list--compact">
+            <li>
+              <strong><a href="https://barfe.netlify.app/index.html" target="_blank" rel="noopener noreferrer">Barfe: Accessible Transit App &rarr;</a></strong>
+              <span class="item-desc">Mobile-first interface designed for elderly and disabled individuals to easily navigate transit, facilities, and accessible travel courses.</span>
+              <span class="item-meta">HTML · CSS · Vanilla JavaScript</span>
+            </li>
+            <li>
+              <strong><a href="https://github.com/mmp17/papayReact" target="_blank" rel="noopener noreferrer">Papay: Food Delivery App &rarr;</a></strong>
+              <span class="item-desc">Food delivery platform with a React/TypeScript frontend and Node.js REST API.</span>
+              <span class="item-meta"><a href="https://github.com/mmp17/papayReact" target="_blank" rel="noopener noreferrer">Frontend</a> · <a href="https://github.com/mmp17/papayProject" target="_blank" rel="noopener noreferrer">Backend</a></span>
+            </li>
+            <li>
+              <strong><a href="https://mfr-react-socialmedia.netlify.app/" target="_blank" rel="noopener noreferrer">React Social Network &rarr;</a></strong>
+              <span class="item-desc">Social networking application with feed generation, post interactions, and profile customizer.</span>
+              <span class="item-meta"><a href="https://github.com/mmp17/react-socialmediaapp" target="_blank" rel="noopener noreferrer">Repository</a></span>
+            </li>
+            <li>
+              <strong><a href="https://mfr-pixabay.netlify.app/" target="_blank" rel="noopener noreferrer">Pixabay Image Explorer &rarr;</a></strong>
+              <span class="item-desc">Media discovery application leveraging Pixabay's REST API with responsive image grids.</span>
+              <span class="item-meta"><a href="https://github.com/mmp17/react-pixabay-imagefinder" target="_blank" rel="noopener noreferrer">Repository</a></span>
+            </li>
+            <li>
+              <strong><a href="https://github.com/mmp17/mfr-cars-mernapp" target="_blank" rel="noopener noreferrer">MFR Cars: MERN Marketplace &rarr;</a></strong>
+              <span class="item-desc">Automotive marketplace with user authentication, catalog filtering, and vehicle specs.</span>
+              <span class="item-meta">MongoDB · Express · React · Node.js</span>
+            </li>
+            <li>
+              <strong><a href="https://mmp17.github.io/usefulwebdevlink/" target="_blank" rel="noopener noreferrer">Curated Web Dev Directory &rarr;</a></strong>
+              <span class="item-desc">Curated catalog of developer resources, API specs, and frontend tools.</span>
+              <span class="item-meta"><a href="https://github.com/mmp17/usefulwebdevlink" target="_blank" rel="noopener noreferrer">Repository</a></span>
+            </li>
+          </ul>
+        </section>
+
+        <p class="note" style="margin-top: 2rem;">Additional code samples and repositories are available on <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a>, and complete visual walk-throughs in the <a href="https://drive.google.com/file/d/1A6H_Tr2nthmnRgy0pdaUHlXgEo-RRkUC/view" target="_blank" rel="noopener noreferrer">Portfolio PDF</a>.</p>
       </main>
     </div>
 
     <footer class="page-footer">
       <ul>
         <li><strong>Follow:</strong></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17">GitHub</a></li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> <a href="https://github.com/mmp17" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> <a href="https://www.linkedin.com/in/mirzaevmuzaffar/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg> <a href="https://www.youtube.com/@mirzaev_muzaffar" target="_blank" rel="noopener noreferrer">YouTube</a></li>
       </ul>
-      <p>&copy; 2026 Muzaffar Mirzaev. Layout modelled on <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</p>
+      <p>&copy; 2026 Muzaffar Mirzaev. Principal Software Engineer in Robotics &amp; Industrial AI.</p>
     </footer>
 
     <script src="../assets/js/site.js"></script>
