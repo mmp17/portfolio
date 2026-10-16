@@ -59,18 +59,34 @@
     <meta property="og:image" content="https://mmp17.github.io/portfolio/images/avatar.jpg">
     <meta property="og:image:alt" content="Portrait of Muzaffar Mirzaev">
     <meta name="twitter:card" content="summary">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#f3f1ec">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script>document.documentElement.className = 'js';</script>
+    <script>
+      document.documentElement.className = 'js';
+      try {
+        var storedTheme = localStorage.getItem('theme');
+        var theme = storedTheme === 'light' || storedTheme === 'dark'
+          ? storedTheme
+          : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        var themeMeta = document.querySelector('meta[name="theme-color"]');
+        if (themeMeta) {
+          themeMeta.setAttribute('content', theme === 'dark' ? '#121411' : '#f3f1ec');
+        }
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="masthead">
       <div class="masthead__inner">
         <a class="masthead__brand" href="index.html">Muzaffar Mirzaev</a>
-        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+        <div class="masthead__end">
         <nav class="site-nav" id="site-nav" aria-label="Main">
           <ul>
             <li><a href="index.html" aria-current="page">Home</a></li>
@@ -80,6 +96,9 @@
             <li><a href="resume/index.html">Resume</a></li>
           </ul>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+        </div>
       </div>
     </header>
 
@@ -113,6 +132,34 @@
             <a class="button" href="resume/index.html">Resume</a>
           </p>
         </div>
+        <h2 id="work">Selected work</h2>
+        <hr>
+        <ul class="work-grid">
+          <li>
+            <a class="work-card" href="projects/index.html#acs">
+              <span class="work-card__kicker">Current · Robotics</span>
+              <strong>AMR Control System</strong>
+              <span class="work-card__text">Turns factory orders into robot missions, then dispatches, monitors and recovers them across a ROS 2 fleet and a FlexSim digital twin.</span>
+              <span class="work-card__more">View project</span>
+            </a>
+          </li>
+          <li>
+            <a class="work-card" href="projects/index.html#hiwms">
+              <span class="work-card__kicker">Smart factory</span>
+              <strong>HiWMS logistics platform</strong>
+              <span class="work-card__text">Warehouse dashboards for inbound, outbound and inventory, with real-time monitoring and an admin portal.</span>
+              <span class="work-card__more">View project</span>
+            </a>
+          </li>
+          <li>
+            <a class="work-card" href="projects/index.html#smart-factory">
+              <span class="work-card__kicker">Industrial AI</span>
+              <strong>Vision, OCR and 3D operations</strong>
+              <span class="work-card__text">Operator interfaces for AI vision, document OCR, a 3D smart locker platform and a WebGL production simulation.</span>
+              <span class="work-card__more">View project</span>
+            </a>
+          </li>
+        </ul>
         <div class="intro">
           <p>I build the software layer between factory operations and autonomous mobile robots: AMR/AGV control systems, ROS 2 fleet integration, digital-twin simulation, and the web applications that operators use to run them. My current work is an <a href="projects/index.html#acs">AMR Control System</a> that takes an order through mission dispatch, execution monitoring, recovery and traceability, and connects that operational software to ROS 2 fleets, PLC equipment and FlexSim simulation.</p>
           <p>I came to robotics through web development. After a period of intensive self-study in 2021, I worked as a frontend and full-stack developer, and from 2024 I built smart-factory software: 3D and WebGL applications, logistics dashboards, and interfaces for AI vision and OCR systems, mostly with TypeScript, React, Next.js, NestJS, FastAPI and Python. I enjoy turning complex factory and robotics requirements into clear, reliable software.</p>
@@ -130,15 +177,15 @@
         </ul>
         <h2 id="activities">Activities</h2>
         <hr>
-        <ul class="content-list">
-          <li><span class="activity-date">[Sep 2026 – Present]</span><span class="activity-body">Principal Software Engineer at a robotics technology company in Seoul. Responsible for the architecture and development of an <a href="projects/index.html#acs">AMR Control System (ACS)</a> for mission management, fleet operations and robot integrations, and for connecting it to ROS 2 fleet management, PLC and IoT devices, and FlexSim digital-twin simulation.</span></li>
-          <li><span class="activity-date">[Aug 2026]</span><span class="activity-body">Awarded a Ph.D. in Management Information Systems by Keimyung University, Daegu, South Korea.</span></li>
-          <li><span class="activity-date">[May 2024 – Feb 2026]</span><span class="activity-body">Senior Software Engineer at <a href="https://topcore.co.kr/">Top Core System</a>, Cheongju. Built web and AI-enabled applications for smart factories, including a 3D smart locker management platform, the HiWMS logistics platform, a WebGL production simulation and dashboards for AI vision, OCR and pose estimation. See <a href="projects/index.html#smart-factory">Projects</a>.</span></li>
-          <li><span class="activity-date">[Oct 2022 – Jan 2023]</span><span class="activity-body">Frontend Developer at LiberTree, Uiwang. Built React-based content applications for library information systems, including the <a href="https://ecipusa.com/">E-CIP</a> platform for US clients, and MARC-related solutions.</span></li>
-          <li><span class="activity-date">[Jan – Sep 2022]</span><span class="activity-body">Frontend Developer at Delmetenz, Asan: my first professional software role. Developed MERN-stack applications with React and TypeScript, implemented authentication, and deployed containerized services with Docker and NGINX.</span></li>
-          <li><span class="activity-date">[2021]</span><span class="activity-body">Taught myself web development in Ansan, South Korea, through self-study, online tutors and training centers. The story is in <a href="blog/index.html#ansan-2021">Learning to code in Ansan</a>.</span></li>
-          <li><span class="activity-date">[Jun 2020 – Dec 2021]</span><span class="activity-body">Freelance Web Developer for Sadaf Alo Stom, Uzbekistan. Developed dental web applications, APIs and responsive interfaces.</span></li>
-          <li><span class="activity-date">[2007 – 2009]</span><span class="activity-body">Master of Business Administration at the Asian Institute of Technology (AIT), Thailand, on the ADB–Japan Scholarship.</span></li>
+        <ul class="content-list activity-list">
+          <li><span class="activity-date">Sep 2026 – Present</span><span class="activity-body">Principal Software Engineer at a robotics technology company in Seoul. Responsible for the architecture and development of an <a href="projects/index.html#acs">AMR Control System (ACS)</a> for mission management, fleet operations and robot integrations, and for connecting it to ROS 2 fleet management, PLC and IoT devices, and FlexSim digital-twin simulation.</span></li>
+          <li><span class="activity-date">Aug 2026</span><span class="activity-body">Awarded a Ph.D. in Management Information Systems by Keimyung University, Daegu, South Korea.</span></li>
+          <li><span class="activity-date">May 2024 – Feb 2026</span><span class="activity-body">Senior Software Engineer at <a href="https://topcore.co.kr/">Top Core System</a>, Cheongju. Built web and AI-enabled applications for smart factories, including a 3D smart locker management platform, the HiWMS logistics platform, a WebGL production simulation and dashboards for AI vision, OCR and pose estimation. See <a href="projects/index.html#smart-factory">Projects</a>.</span></li>
+          <li><span class="activity-date">Oct 2022 – Jan 2023</span><span class="activity-body">Frontend Developer at LiberTree, Uiwang. Built React-based content applications for library information systems, including the <a href="https://ecipusa.com/">E-CIP</a> platform for US clients, and MARC-related solutions.</span></li>
+          <li><span class="activity-date">Jan – Sep 2022</span><span class="activity-body">Frontend Developer at Delmetenz, Asan: my first professional software role. Developed MERN-stack applications with React and TypeScript, implemented authentication, and deployed containerized services with Docker and NGINX.</span></li>
+          <li><span class="activity-date">2021</span><span class="activity-body">Taught myself web development in Ansan, South Korea, through self-study, online tutors and training centers. The story is in <a href="blog/index.html#ansan-2021">Learning to code in Ansan</a>.</span></li>
+          <li><span class="activity-date">Jun 2020 – Dec 2021</span><span class="activity-body">Freelance Web Developer for Sadaf Alo Stom, Uzbekistan. Developed dental web applications, APIs and responsive interfaces.</span></li>
+          <li><span class="activity-date">2007 – 2009</span><span class="activity-body">Master of Business Administration at the Asian Institute of Technology (AIT), Thailand, on the ADB–Japan Scholarship.</span></li>
         </ul>
       </main>
     </div>
