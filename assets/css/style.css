@@ -864,33 +864,40 @@ hr {
 /* ==========================================================================
    Activity / Timeline Components
    ========================================================================== */
-.activity-list {
+/* Doubled class so these win over the generic .content-list rules below. */
+.content-list.activity-list {
   position: relative;
   margin-left: 0.5rem;
   padding-left: 1.5rem;
   border-left: 2px solid var(--rule);
 }
 
-.activity-list > li {
+.content-list.activity-list > li {
   position: relative;
   padding: 0 0 1.5rem 0.5rem;
   border-bottom: 0;
   list-style: none;
 }
 
-.activity-list > li::before {
+/* The dot hangs off the date badge so it stays centred on it. */
+.activity-date {
+  position: relative;
+}
+
+.activity-date::before {
   position: absolute;
-  top: 0.35rem;
-  left: calc(-1.5rem - 6px);
+  top: 50%;
+  left: calc(-2rem - 6px);
   width: 10px;
   height: 10px;
+  margin-top: -5px;
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 4px var(--bg);
   content: "";
 }
 
-.activity-list > li:first-child::before {
+.activity-list > li:first-child .activity-date::before {
   box-shadow: 0 0 0 4px var(--bg), 0 0 12px var(--accent);
 }
 
