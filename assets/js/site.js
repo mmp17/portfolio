@@ -357,6 +357,117 @@
   }
 
   /* ==========================================================================
+     Visit Stats (GoatCounter)
+     ========================================================================== */
+  var GOATCOUNTER = 'https://mmp17.goatcounter.com';
+  var LIVE_HOST = 'mmp17.github.io';
+
+  // GoatCounter buckets days in the site's timezone (UTC by default).
+  function utcDay(daysAgo) {
+    var d = new Date();
+    d.setUTCDate(d.getUTCDate() - daysAgo);
+    return d.toISOString().slice(0, 10);
+  }
+
+  function countVisits(fromDaysAgo, toDaysAgo) {
+    var url = GOATCOUNTER + '/counter/TOTAL.json?start=' + utcDay(fromDaysAgo) + '&end=' + utcDay(toDaysAgo);
+    return fetch(url).then(function (res) {
+      if (!res.ok) {
+        throw new Error('GoatCounter ' + res.status);
+      }
+      return res.json();
+    }).then(function (data) {
+      return parseInt(String(data.count).replace(/\D/g, ''), 10) || 0;
+    });
+  }
+
+  function describeChange(current, previous) {
+    if (previous === 0) {
+      return current > 0 ? { text: 'New', trend: 'is-up' } : { text: 'No change', trend: '' };
+    }
+    var pct = Math.round(((current - previous) / previous) * 100);
+    if (pct === 0) {
+      return { text: '0%', trend: '' };
+    }
+    return pct > 0
+      ? { text: '\u25B2 ' + pct + '%', trend: 'is-up' }
+      : { text: '\u25BC ' + Math.abs(pct) + '%', trend: 'is-down' };
+  }
+
+  function visitStats() {
+    // Forks and local copies must not count toward (or display) the live site's stats.
+    if (location.hostname !== LIVE_HOST) {
+      return;
+    }
+
+    var tracker = document.createElement('script');
+    tracker.async = true;
+    tracker.src = 'https://gc.zgo.at/count.js';
+    tracker.setAttribute('data-goatcounter', GOATCOUNTER + '/count');
+    document.body.appendChild(tracker);
+
+    var footer = document.querySelector('.page-footer');
+    if (!footer) {
+      return;
+    }
+
+    var periods = [
+      { label: 'Today', days: 1, compare: 'vs yesterday' },
+      { label: 'Last 7 days', days: 7, compare: 'vs previous 7 days' },
+      { label: 'Last 30 days', days: 30, compare: 'vs previous 30 days' }
+    ];
+
+    Promise.all(periods.map(function (period) {
+      return Promise.all([
+        countVisits(period.days - 1, 0),
+        countVisits(period.days * 2 - 1, period.days)
+      ]);
+    })).then(function (results) {
+      var section = document.createElement('section');
+      section.className = 'visit-stats';
+      section.setAttribute('aria-label', 'Site visits');
+
+      var title = document.createElement('p');
+      title.className = 'visit-stats__title';
+      title.textContent = 'Visitors';
+      section.appendChild(title);
+
+      var grid = document.createElement('ul');
+      grid.className = 'visit-stats__grid';
+
+      periods.forEach(function (period, i) {
+        var current = results[i][0];
+        var change = describeChange(current, results[i][1]);
+
+        var item = document.createElement('li');
+        item.className = 'visit-stats__item';
+
+        var label = document.createElement('span');
+        label.className = 'visit-stats__label';
+        label.textContent = period.label;
+
+        var value = document.createElement('span');
+        value.className = 'visit-stats__value';
+        value.textContent = current.toLocaleString();
+
+        var delta = document.createElement('span');
+        delta.className = 'visit-stats__change ' + change.trend;
+        delta.textContent = change.text + ' ' + period.compare;
+
+        item.appendChild(label);
+        item.appendChild(value);
+        item.appendChild(delta);
+        grid.appendChild(item);
+      });
+
+      section.appendChild(grid);
+      footer.insertBefore(section, footer.querySelector('p'));
+    }).catch(function () {
+      // Stats are decorative; leave the footer as-is if GoatCounter is unreachable.
+    });
+  }
+
+  /* ==========================================================================
      DOM Ready Initialization
      ========================================================================== */
   document.addEventListener('DOMContentLoaded', function () {
@@ -368,5 +479,6 @@
     document.querySelectorAll('.post-card').forEach(gallery);
     setupEmailCopy();
     setupBackToTop();
+    visitStats();
   });
 })();
