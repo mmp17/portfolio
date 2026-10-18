@@ -359,7 +359,7 @@
   /* ==========================================================================
      Visit Stats (GoatCounter)
      ========================================================================== */
-  var GOATCOUNTER = 'https://mmp17.goatcounter.com';
+  var GOATCOUNTER = 'https://muzaffar.goatcounter.com';
   var LIVE_HOST = 'mmp17.github.io';
 
   // GoatCounter buckets days in the site's timezone (UTC by default).
@@ -383,7 +383,7 @@
 
   function describeChange(current, previous) {
     if (previous === 0) {
-      return current > 0 ? { text: 'New', trend: 'is-up' } : { text: 'No change', trend: '' };
+      return current > 0 ? { text: 'New', trend: 'is-up' } : { text: '0%', trend: '' };
     }
     var pct = Math.round(((current - previous) / previous) * 100);
     if (pct === 0) {
@@ -394,9 +394,70 @@
       : { text: '\u25BC ' + Math.abs(pct) + '%', trend: 'is-down' };
   }
 
+  var VISIT_PERIODS = [
+    { label: 'Today', days: 1, compare: 'vs yesterday' },
+    { label: '7 days', days: 7, compare: 'vs previous 7 days' },
+    { label: '30 days', days: 30, compare: 'vs previous 30 days' }
+  ];
+
+  // [current, previous] per period, shown off the live site so the footer can be previewed.
+  var SAMPLE_VISITS = [[42, 51], [318, 274], [1186, 962]];
+
+  function renderVisitStats(footer, results, isSample) {
+    var section = document.createElement('section');
+    section.className = 'visit-stats';
+    section.setAttribute('aria-label', 'Site visits');
+
+    var title = document.createElement('span');
+    title.className = 'visit-stats__title';
+    title.textContent = isSample ? 'Visitors (sample):' : 'Visitors:';
+    section.appendChild(title);
+
+    var list = document.createElement('ul');
+    list.className = 'visit-stats__list';
+
+    VISIT_PERIODS.forEach(function (period, i) {
+      var current = results[i][0];
+      var change = describeChange(current, results[i][1]);
+
+      var item = document.createElement('li');
+      item.className = 'visit-stats__item';
+      item.title = change.text + ' ' + period.compare;
+
+      var label = document.createElement('span');
+      label.textContent = period.label;
+
+      var value = document.createElement('span');
+      value.className = 'visit-stats__value';
+      value.textContent = current.toLocaleString();
+
+      var delta = document.createElement('span');
+      delta.className = 'visit-stats__change ' + change.trend;
+      delta.textContent = change.text;
+
+      var compare = document.createElement('span');
+      compare.className = 'visit-stats__compare';
+      compare.textContent = ' ' + period.compare;
+      delta.appendChild(compare);
+
+      item.appendChild(label);
+      item.appendChild(value);
+      item.appendChild(delta);
+      list.appendChild(item);
+    });
+
+    section.appendChild(list);
+    footer.insertBefore(section, footer.querySelector('p'));
+  }
+
   function visitStats() {
-    // Forks and local copies must not count toward (or display) the live site's stats.
+    var footer = document.querySelector('.page-footer');
+
+    // Forks and local copies must not count toward the live site's stats.
     if (location.hostname !== LIVE_HOST) {
+      if (footer) {
+        renderVisitStats(footer, SAMPLE_VISITS, true);
+      }
       return;
     }
 
@@ -406,62 +467,17 @@
     tracker.setAttribute('data-goatcounter', GOATCOUNTER + '/count');
     document.body.appendChild(tracker);
 
-    var footer = document.querySelector('.page-footer');
     if (!footer) {
       return;
     }
 
-    var periods = [
-      { label: 'Today', days: 1, compare: 'vs yesterday' },
-      { label: 'Last 7 days', days: 7, compare: 'vs previous 7 days' },
-      { label: 'Last 30 days', days: 30, compare: 'vs previous 30 days' }
-    ];
-
-    Promise.all(periods.map(function (period) {
+    Promise.all(VISIT_PERIODS.map(function (period) {
       return Promise.all([
         countVisits(period.days - 1, 0),
         countVisits(period.days * 2 - 1, period.days)
       ]);
     })).then(function (results) {
-      var section = document.createElement('section');
-      section.className = 'visit-stats';
-      section.setAttribute('aria-label', 'Site visits');
-
-      var title = document.createElement('p');
-      title.className = 'visit-stats__title';
-      title.textContent = 'Visitors';
-      section.appendChild(title);
-
-      var grid = document.createElement('ul');
-      grid.className = 'visit-stats__grid';
-
-      periods.forEach(function (period, i) {
-        var current = results[i][0];
-        var change = describeChange(current, results[i][1]);
-
-        var item = document.createElement('li');
-        item.className = 'visit-stats__item';
-
-        var label = document.createElement('span');
-        label.className = 'visit-stats__label';
-        label.textContent = period.label;
-
-        var value = document.createElement('span');
-        value.className = 'visit-stats__value';
-        value.textContent = current.toLocaleString();
-
-        var delta = document.createElement('span');
-        delta.className = 'visit-stats__change ' + change.trend;
-        delta.textContent = change.text + ' ' + period.compare;
-
-        item.appendChild(label);
-        item.appendChild(value);
-        item.appendChild(delta);
-        grid.appendChild(item);
-      });
-
-      section.appendChild(grid);
-      footer.insertBefore(section, footer.querySelector('p'));
+      renderVisitStats(footer, results, false);
     }).catch(function () {
       // Stats are decorative; leave the footer as-is if GoatCounter is unreachable.
     });
